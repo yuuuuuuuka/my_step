@@ -89,5 +89,5 @@ gem 'devise'
 gem 'pry-rails'
 gem 'bootstrap', '~> 5.2.3'
 gem 'jquery-rails'
-gem 'rspec-rails', '~> 4.0.0'
-gem 'factory_bot_rails'
+
+
