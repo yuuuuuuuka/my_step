@@ -11,7 +11,7 @@ my_step
 | name                 | string | null: false |
 | email                | string | null: false,unique: true |
 | encrypted_password   | string | null: false | 
- has many :records
+ has many :logs
  has_one :profile,dependent: :destroy
 
 ## profileテーブル
@@ -26,7 +26,7 @@ belongs_to :user
 
 
 
-##　Recordテーブル
+##　Logsテーブル
 
 | Column         | Type       | Options                        |
 | ------         | ---------- | ------------------------------ |
