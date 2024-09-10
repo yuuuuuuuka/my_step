@@ -8,11 +8,8 @@ class LogsController < ApplicationController
   end
 
   def create
-    binding.pry
     @log = Log.new(log_params)
-
     if @log.save
-
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity

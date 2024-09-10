@@ -7,5 +7,5 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は半角英数字で入力してください' }
 
-  has_many :records
+  has_many :logs
 end
