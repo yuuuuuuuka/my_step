@@ -25,9 +25,10 @@
         <h1 class="grid-6"><a href="/">MY Step</a>
         </h1>
          <% if user_signed_in? %>
+         <div class ="nav">
+          
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
-           
           </div>
         <% else %>
           <div class="grid-6">

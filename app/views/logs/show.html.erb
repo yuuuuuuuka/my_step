@@ -1,15 +1,13 @@
-<div>
-  <p>日付: <%= @log.date %></p>
-  <p>メニュー: <%= @log.name %> </p>
-  <p>時間: <%= @log.duration %> 分</p>
-  <p>回数: <%= @log.reps %></p>
-  <p>メモ: <%= @log.memo %></p>
+<div class="log-details">
+  <p class="log-item"><strong>日付:</strong> <%= @log.date %></p>
+  <p class="log-item"><strong>メニュー:</strong> <%= @log.name %></p>
+  <p class="log-item"><strong>時間:</strong> <%= @log.duration %> 分</p>
+  <p class="log-item"><strong>回数:</strong> <%= @log.reps %></p>
+  <p class="log-item"><strong>メモ:</strong> <%= @log.memo %></p>
+
+  <div class="log-actions">
+    <%= link_to "編集", edit_log_path(@log.id), method: :get, class: "item-red-btn" %>
+    <%= link_to "削除", log_path(@log.id), data: { turbo_method: :delete }, class: "item-destroy" %>
+    <%= link_to "戻る", logs_path, class: "item-back" %>
+  </div>
 </div>
-
-
-    <%= link_to "編集", edit_log_path(@log.id) , method: :get, class: "item-red-btn" %>
-    <p class="or-text">
-    <%= link_to "削除", logs_path(@log.id), data: {turbo_method: :delete}, class:"item-destroy" %>
-   
-
-<%= link_to '戻る', logs_path %>

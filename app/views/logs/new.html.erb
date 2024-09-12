@@ -4,6 +4,7 @@
   </div>
 
   <%= form_with(model: @log, local: true) do |form| %>
+  <div class ="form-box">
     <div class="form-group">
       <%= form.label :date, "日付" %>
       <%= form.date_field :date %>
@@ -27,4 +28,5 @@
 
     <%= form.submit "記録する" %>
   <% end %>
+  
 </div>
