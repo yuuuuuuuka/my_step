@@ -1,0 +1,15 @@
+<div>
+  <p>日付: <%= @log.date %></p>
+  <p>メニュー: <%= @log.name %> </p>
+  <p>時間: <%= @log.duration %> 分</p>
+  <p>回数: <%= @log.reps %></p>
+  <p>メモ: <%= @log.memo %></p>
+</div>
+
+
+    <%= link_to "編集", edit_log_path(@log.id) , method: :get, class: "item-red-btn" %>
+    <p class="or-text">
+    <%= link_to "削除", logs_path(@log.id), data: {turbo_method: :delete}, class:"item-destroy" %>
+   
+
+<%= link_to '戻る', logs_path %>

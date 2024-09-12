@@ -1,3 +1,23 @@
+<div class="first-view">
+
+    <div class = "top-text">let' start!</div>
+    <div class = "menu-content">
+      <h2 class="heading-name">ABOUT</h2>
+      <%= link_to "投稿する", new_log_path, class: "post" %> 
+      <%= link_to "記録を見る", "#", class: "post" %> 
+      <%= link_to "マイページ", "#", class: "post" %> 
+      <%= month_calendar do |date| %>
+  <%= date %>
+    <% @logs&.each do |log| %> <!-- @logs が nil の場合にエラーを回避 -->
+    <% if log.date == date %>
+      <div>
+         <%= link_to log.name, log_path(log), class: "post" %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
 
 
 
+
+</div>

@@ -1,6 +1,7 @@
 class LogsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   def index
+    @logs = Log.all
   end
 
   def new
@@ -14,6 +15,17 @@ class LogsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @log = Log.find(params[:id])
+    @logs = Log.all
+  end
+
+  def edit
+  end
+
+  def create
   end
 
   private
