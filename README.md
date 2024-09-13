@@ -13,14 +13,15 @@ my_step
 | encrypted_password   | string | null: false | 
  has many :logs
  has_one :profile,dependent: :destroy
+has_many :weights, dependent: :destroy
 
 ## profileテーブル
 | Column               | Type       | Options     |
 | -----------------    | ------     | ----------- |
 | user                 | references | null: false, foreign_key: true |
-| height               | int        | null: false |
-| weight               | int        | null: false |
-| goal_weight          | int        | null: false |
+| height               | float        | null: false |
+| weight               | float        | null: false |
+| goal_weight          | float        | null: false |
 belongs_to :user
  
 
@@ -41,6 +42,15 @@ belongs_to:user
 
 
 
+
+weightsテーブル
+
+| Column         | Type       | Options                        |
+| user           | references | null: false, foreign_key: true |
+| date           |  date      | null: false                    |
+| weight         | float        | null: false |
+
+ belongs_to :user
 
 
 # README

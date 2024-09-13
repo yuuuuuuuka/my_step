@@ -1,6 +1,6 @@
 class LogsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update, :destroy]
   def index
     @logs = Log.all
   end
