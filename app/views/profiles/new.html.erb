@@ -1,18 +1,19 @@
-<%= form_with(model: @profile, url: user_profiles_path(current_user), local: true) do |form| %>
-  <div>
-    <%=form.label :goal_weight, "理想の体重" %>
-    <%= form.number_field :goal_weight, step: :any, placeholder: "理想の体重を入力" %>
-  </div>
 
-  <div>
-    <%= form.label :height, "身長 (cm)" %>
-    <%= form.number_field :height, step: :any, placeholder: "身長を入力", required: true %>
+<div class="chat-main">
+  <div class="container">
+<%= form_with(model: @profile, url: user_profiles_path(current_user), local: true) do |form| %>
+
+  <div class="form-group">
+    <%= form.label :height, "身長 (cm)", class: "form-label" %>
+    <%= form.number_field :height, step: :any, placeholder: "身長を入力", required: true, class: "form-control" %>
   </div>
-  <div>
-    <%= form.label :weight, "体重 (kg)" %>
-    <%= form.number_field :weight, step: :any, placeholder: "体重を入力", required: true %>
+  <div class="form-group">
+    <%= form.label :weight, "体重 (kg)", class: "form-label" %>
+    <%= form.number_field :weight, step: :any, placeholder: "体重を入力", required: true, class: "form-control" %>
   </div>
-  <div>
-    <%= submit_tag "BMIを計算" %>
+  <div class="form-group">
+    <%= submit_tag "BMIを計算", class: "btn btn-primary" %>
   </div>
 <% end %>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-# アプリケーション名 
+# アプリケーション名
 my_step
 
 # URL
@@ -10,7 +10,7 @@ my_step
 | ------------------   | ------ | ----------- |
 | name                 | string | null: false |
 | email                | string | null: false,unique: true |
-| encrypted_password   | string | null: false | 
+| encrypted_password   | string | null: false |
  has many :logs
  has_one :profile,dependent: :destroy
 has_many :weights, dependent: :destroy
@@ -19,11 +19,11 @@ has_many :weights, dependent: :destroy
 | Column               | Type       | Options     |
 | -----------------    | ------     | ----------- |
 | user                 | references | null: false, foreign_key: true |
-| height               | float        | null: false |
+| height               | float        |  |
 | weight               | float        | null: false |
-| goal_weight          | float        | null: false |
+| goal_weight          | float        | |
 belongs_to :user
- 
+
 
 
 
@@ -35,7 +35,7 @@ belongs_to :user
 | name           | string     | null: false                    |
 | date           |  date      | null: false                    |
 | duration       | int        | null: false, greater_than_or_equal_to: 0 |
-| reps           | int        | null: false, greater_than:0    |           
+| reps           | int        | null: false, greater_than:0    |
 | memo           | text       |                                |
 
 belongs_to:user
