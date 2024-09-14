@@ -15,6 +15,7 @@ my_step
  has_one :profile,dependent: :destroy
 has_many :weights, dependent: :destroy
 
+
 ## profileテーブル
 | Column               | Type       | Options     |
 | -----------------    | ------     | ----------- |
@@ -37,7 +38,7 @@ belongs_to :user
 | duration       | int        | null: false, greater_than_or_equal_to: 0 |
 | reps           | int        | null: false, greater_than:0    |
 | memo           | text       |                                |
-
+### モデルの関連付け
 belongs_to:user
 
 
@@ -50,7 +51,10 @@ weightsテーブル
 | date           |  date      | null: false                    |
 | weight         | float        | null: false |
 
- belongs_to :user
+
+ ### モデルの関連付け
+belongs_to :user
+
 
 
 # README
