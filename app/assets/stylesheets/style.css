@@ -24,8 +24,8 @@ label {
 }
 
 
-/******************************************************** 
-　トップページ 
+/********************************************************
+　トップページ
 ********************************************************/
 /* 全体の背景色を落ち着いた淡い黄色に */
 body {
@@ -120,8 +120,8 @@ body {
 
 
 
-/******************************************************** 
-　index 
+/********************************************************
+　logs/index
 ********************************************************/
 
 
@@ -192,6 +192,22 @@ body {
   color: #222;
 }
 
+
+
+/********************************************************
+　カレンダー
+********************************************************/
+
+.calendar-heading {
+  /* あなたのスタイルをここに追加します */
+  font-size: 20px;
+  color: #333;
+  padding: 10px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+
 /* カレンダーの日付のスタイル */
 .month-calendar {
   margin-top: 20px;
@@ -234,8 +250,8 @@ body {
 
 
 
-/******************************************************** 
-　new
+/********************************************************
+　logs/new
 ********************************************************/
 body {
   background-color: #FFF8DC;
@@ -437,7 +453,7 @@ input[type="submit"]:hover {
 
 
 
-/******************************************************** 
+/********************************************************
  show
 ********************************************************/
 
@@ -536,4 +552,171 @@ input[type="submit"]:hover {
   .log-actions a {
     margin-bottom: 10px;
   }
+}
+
+
+
+/********************************************************
+ profiles/show
+********************************************************/
+.bmi-result-container {
+  display: flex;
+  justify-content: center;
+  /* 横幅中央に配置 */
+  padding: 20px;
+}
+
+.bmi-result-container div {
+  background-color: #f5f5dc;
+  /* ベージュ色 */
+  border: 2px solid #e0e0c8;
+  /* ベージュに近い色で囲む */
+  border-radius: 10px;
+  /* 角を丸くする */
+  padding: 20px;
+  width: 60%;
+  /* 横幅を狭く */
+  max-width: 600px;
+  /* 最大幅を設定 */
+  text-align: center;
+  /* テキスト中央寄せ */
+}
+
+.bmi-result-title {
+  font-size: 36px;
+  /* タイトルの文字サイズを大きく */
+  margin-bottom: 20px;
+}
+
+.bmi-detail,
+.bmi-category {
+  font-size: 28px;
+  /* 文字サイズを大きく */
+  margin-bottom: 10px;
+}
+
+.bmi-category-results {
+  display: flex;
+  justify-content: center;
+  /* 横幅中央に配置 */
+  margin-top: 20px;
+}
+
+.bmi-category-results h2 {
+  font-size: 32px;
+  /* 項目結果の文字サイズを大きく */
+  text-align: center;
+  margin-top: 30px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  /* 横幅中央に配置 */
+  margin-top: 20px;
+}
+
+.table {
+  width: 80%;
+  /* 横幅を広げる */
+  max-width: 800px;
+  /* テーブルの最大幅 */
+  border-collapse: collapse;
+  background-color: #fff7e6;
+  /* 淡いオレンジ色 */
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 16px;
+  /* パディングを増やして形を調整 */
+  text-align: center;
+  font-size: 20px;
+  /* 文字サイズを大きく */
+}
+
+.table th {
+  background-color: #f2d3b3;
+  /* ヘッダーの背景色 */
+  color: black;
+  /* 文字色を黒に */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #feeacc;
+  /* 奇数行の背景色 */
+}
+
+
+/********************************************************
+ profiles/new
+********************************************************/
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-label {
+  font-size: 18px;
+  /* フォントサイズを大きくする */
+  font-weight: bold;
+  color: #000;
+  /* 必要に応じて色も変更可能です */
+}
+
+/* フォームラベルのスタイル */
+.form-group {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2c4c4e;
+}
+
+.form-control {
+  width: 40px;
+  /* 横幅を40pxに設定 */
+  padding: 5px;
+  /* 必要ならばパディング調整 */
+  border: 1px solid #add8e6;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* 入力フィールドのスタイル */
+.form-group {
+  width: 100%;
+  padding: 15px;
+  /* 縦幅を広げる */
+
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  /* テキストサイズを調整する */
+}
+
+/* エラーハンドリング - クラス名にタイプミスがないか確認 */
+.form-group .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 送信ボタンのスタイル */
+.btn {
+  padding: 15px 20px;
+  /* ボタンのパディングを調整して縦幅を広げる */
+  background: #5f9ea0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  /* フォントサイズを調整する */
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #4f818a;
 }

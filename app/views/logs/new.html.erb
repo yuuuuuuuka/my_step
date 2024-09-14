@@ -3,30 +3,33 @@
     <h1>運動記録投稿</h1>
   </div>
 
-  <%= form_with(model: @log, local: true) do |form| %>
-  <div class ="form-box">
+  <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true, data: { turbo: false } do |form| %>
+
+  <div class="form-box">
     <div class="form-group">
-      <%= form.label :date, "日付" %>
-      <%= form.date_field :date %>
+      <%= form.label :date, "日付", class: "form-label" %>
+      <%= form.date_field :date, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= form.label :name, "運動名" %>
-      <%= form.text_field :name, placeholder: "例：ランニング、筋トレ" %>
+      <%= form.label :name, "運動名", class: "form-label" %>
+      <%= form.text_field :name, placeholder: "例：ランニング、筋トレ", class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= form.label :duration, "運動時間（分）" %>
-      <%= form.number_field :duration, min: 0, placeholder: "例：30" %>
+      <%= form.label :duration, "運動時間（分）", class: "form-label" %>
+      <%= form.number_field :duration, min: 0, placeholder: "例：30", class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= form.label :reps, "回数" %>
-      <%= form.number_field :reps, min: 0, placeholder: "例：10" %>
+      <%= form.label :reps, "回数", class: "form-label" %>
+      <%= form.number_field :reps, min: 0, placeholder: "例：10", class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= form.label :memo, "メモ" %>
-      <%= form.text_area :memo, rows: 3, placeholder: "記録したいこと" %>
+      <%= form.label :memo, "メモ", class: "form-label" %>
+      <%= form.text_area :memo, rows: 3, placeholder: "記録したいこと", class: "form-control" %>
     </div>
 
-    <%= form.submit "記録する" %>
+    <div class="form-group">
+      <%= form.submit "記録する", class: "btn btn-primary" %>
+    </div>
+  </div>
   <% end %>
-  
 </div>

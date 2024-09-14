@@ -5,3 +5,4 @@
 //= require bootstrap-sprockets
 import "@hotwired/turbo-rails"
 import "controllers"
+import "./custom_form"  // カカスタムフォーム用のJavaScriptを読み込む

@@ -1,8 +1,8 @@
 
 <div class="contents row">
     <div class ="login-containe">
-      
-     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+
+     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true,data: { turbo: false } do |f| %>
      <%= render 'devise/shared/error_messages',model: @user %>
      <div class= "login-title">
      <h1>Sign up</h1>
@@ -23,7 +23,7 @@
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    
+
     <% end %>
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
@@ -37,9 +37,3 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
-
-
-
-
-
