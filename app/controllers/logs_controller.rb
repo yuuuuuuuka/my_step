@@ -1,6 +1,9 @@
 class LogsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :move_to_index, except: [:index, :show, :destroy]
   before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update, :destroy]
+
   def index
     @logs = Log.all
   end
@@ -24,9 +27,24 @@ class LogsController < ApplicationController
   end
 
   def edit
+    @log = Log.find(params[:id])
   end
 
   def update
+    @log = Log.find(params[:id])
+    if @log.update(log_params)
+      redirect_to root_path, notice: '運動記録が更新されました。'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    log = Log.find(params[:id])
+    return unless log.user == current_user
+
+    log.destroy
+    redirect_to root_path
   end
 
   private

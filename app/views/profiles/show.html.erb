@@ -1,5 +1,44 @@
-<h1>BMI計算結果</h1>
 
-<p><strong>身長:</strong> <%= @profile.height %> cm</p>
-<p><strong>体重:</strong> <%= @profile.weight %> kg</p>
-<p><strong>BMI:</strong> <%= @bmi %></p>
+<div class="bmi-result-container">
+  <div>
+    <h1 class="bmi-result-title">BMI計算結果</h1>
+
+    <p class="bmi-detail"><strong>身長:</strong> <%= @profile.height %> cm</p>
+    <p class="bmi-detail"><strong>体重:</strong> <%= @profile.weight %> kg</p>
+    <p class="bmi-detail"><strong>BMI:</strong> <%= @bmi %></p>
+
+    <p class="bmi-category"><strong>BMIカテゴリー:</strong> <%= bmi_category(@bmi) %></p>
+  </div>
+</div>
+
+<div class="bmi-category-results">
+  <h2>BMIカテゴリ結果</h2>
+</div>
+
+<div class="table-container">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">BMIカテゴリー</th>
+        <th scope="col">該当</th>
+      </tr>
+    </thead>
+    <tbody id="bmi-table-body">
+      <% categories = {
+        '低体重' => (0..18.4),
+        '普通体重' => (18.5..24.9),
+        '肥満（1度）' => (25.0..29.9),
+        '肥満（2度）' => (30.0..34.9),
+        '肥満（3度）' => (35.0..39.9),
+        '肥満（4度）' => (40.0..Float::INFINITY)
+      } %>
+
+      <% categories.each do |category, range| %>
+        <tr>
+          <td><%= category %></td>
+          <td><%= '⭕️' if range.cover?(@bmi) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

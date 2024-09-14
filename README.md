@@ -1,4 +1,4 @@
-# アプリケーション名 
+# アプリケーション名
 my_step
 
 # URL
@@ -11,9 +11,12 @@ my_step
 | name                 | string | null: false |
 | email                | string | null: false,unique: true |
 | encrypted_password   | string | null: false | 
- has many :logs
- has_one :profile,dependent: :destroy
+ 
+### モデルの関連付け
+has_many :logs
+has_one :profile, dependent: :destroy
 has_many :weights, dependent: :destroy
+
 
 ## profileテーブル
 | Column               | Type       | Options     |
@@ -23,7 +26,7 @@ has_many :weights, dependent: :destroy
 | weight               | float        | null: false |
 | goal_weight          | float        | null: false |
 belongs_to :user
- 
+
 
 
 
@@ -35,9 +38,9 @@ belongs_to :user
 | name           | string     | null: false                    |
 | date           |  date      | null: false                    |
 | duration       | int        | null: false, greater_than_or_equal_to: 0 |
-| reps           | int        | null: false, greater_than:0    |           
+| reps           | int        | null: false, greater_than:0    |
 | memo           | text       |                                |
-
+### モデルの関連付け
 belongs_to:user
 
 
@@ -50,7 +53,10 @@ weightsテーブル
 | date           |  date      | null: false                    |
 | weight         | float        | null: false |
 
- belongs_to :user
+
+ ### モデルの関連付け
+belongs_to :user
+
 
 
 # README
