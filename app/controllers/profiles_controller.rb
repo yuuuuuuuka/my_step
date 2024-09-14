@@ -1,6 +1,11 @@
 class ProfilesController < ApplicationController
   before_action :move_to_index, only: [:index, :show]
 
+
+  def index
+    @profiles = Profile.all
+  end
+
   def new
     @profile = Profile.new
   end

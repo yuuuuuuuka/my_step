@@ -10,32 +10,21 @@ my_step
 | ------------------   | ------ | ----------- |
 | name                 | string | null: false |
 | email                | string | null: false,unique: true |
-<<<<<<< Updated upstream
 | encrypted_password   | string | null: false | 
- has many :logs
- has_one :profile,dependent: :destroy
-=======
-| encrypted_password   | string | null: false |
+ 
 ### モデルの関連付け
 has_many :logs
 has_one :profile, dependent: :destroy
 has_many :weights, dependent: :destroy
->>>>>>> Stashed changes
+
 
 ## profileテーブル
 | Column               | Type       | Options     |
 | -----------------    | ------     | ----------- |
 | user                 | references | null: false, foreign_key: true |
-<<<<<<< Updated upstream
-| height               | int        | null: false |
-| weight               | int        | null: false |
-| goal_weight          | int        | null: false |
-=======
 | height               | float        | null: false |
 | weight               | float        | null: false |
 | goal_weight          | float        | null: false |
-### モデルの関連付け
->>>>>>> Stashed changes
 belongs_to :user
 
 
@@ -57,8 +46,6 @@ belongs_to:user
 
 
 
-<<<<<<< Updated upstream
-=======
 weightsテーブル
 
 | Column         | Type       | Options                        |
@@ -66,9 +53,11 @@ weightsテーブル
 | date           |  date      | null: false                    |
 | weight         | float        | null: false |
 
+
  ### モデルの関連付け
 belongs_to :user
->>>>>>> Stashed changes
+
+
 
 # README
 

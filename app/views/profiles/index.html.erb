@@ -1,0 +1,22 @@
+<p><%= current_user.name %>さんの投稿一覧</p>
+
+<table>
+  <thead>
+    <tr>
+
+      <th>体重 (kg)</th>
+      <th>BMI</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.weight %> kg</td>
+        <td><%= profile.bmi %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

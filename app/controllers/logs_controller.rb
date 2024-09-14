@@ -1,11 +1,9 @@
 class LogsController < ApplicationController
-<<<<<<< Updated upstream
-  before_action :move_to_index, except: [:index, :show]
+
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-=======
   before_action :move_to_index, except: [:index, :show, :destroy]
   before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update, :destroy]
->>>>>>> Stashed changes
+
   def index
     @logs = Log.all
   end
