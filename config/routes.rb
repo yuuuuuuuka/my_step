@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :logs
 
   resources :users do
-    resources :profiles, only: [:new, :create, :show,:index]
+    resources :profiles, only: [:new, :create, :show,:index,:edit]
     end
 
 end

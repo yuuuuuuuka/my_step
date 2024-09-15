@@ -1,9 +1,10 @@
 class LogsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   before_action :move_to_index, except: [:index, :show, :destroy]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @logs = Log.all
+    @logs = current_user.logs
   end
 
   def new
@@ -12,6 +13,7 @@ class LogsController < ApplicationController
 
   def create
     @log = Log.new(log_params)
+    @log.calculate_calories
     if @log.save
       redirect_to root_path
     else
@@ -21,7 +23,7 @@ class LogsController < ApplicationController
 
   def show
     @log = Log.find(params[:id])
-    @logs = Log.all
+    @logs = current_user.logs
   end
 
   def edit
@@ -55,5 +57,12 @@ class LogsController < ApplicationController
     return if user_signed_in?
 
     redirect_to action: :index
+  end
+
+  def correct_user
+    @log = current_user.logs.find_by(id: params[:id])
+    return unless @log.nil?
+
+    redirect_to logs_path
   end
 end

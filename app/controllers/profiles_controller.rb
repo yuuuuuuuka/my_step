@@ -25,6 +25,10 @@ class ProfilesController < ApplicationController
     @bmi = @profile.bmi
   end
 
+  def edit
+
+  end
+
   private
 
   def profile_params

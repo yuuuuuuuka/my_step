@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_12_113753) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_15_012546) do
   create_table "logs", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.date "date", null: false
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_12_113753) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "calories_burned"
     t.index ["user_id"], name: "index_logs_on_user_id"
   end
 

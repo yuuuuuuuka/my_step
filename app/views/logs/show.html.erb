@@ -1,9 +1,21 @@
+
+
 <div class="log-details">
-  <p class="log-item"><strong>日付:</strong> <%= @log.date %></p>
-  <p class="log-item"><strong>メニュー:</strong> <%= @log.name %></p>
-  <p class="log-item"><strong>時間:</strong> <%= @log.duration %> 分</p>
-  <p class="log-item"><strong>回数:</strong> <%= @log.reps %></p>
-  <p class="log-item"><strong>メモ:</strong> <%= @log.memo %></p>
+  <h1 class="title-tpo">本日の成果</h1>
+  <dl class="log-list">
+    <dt>日付</dt>
+    <dd><%= @log.date %></dd>
+    <dt>メニュー</dt>
+    <dd><%= @log.name %></dd>
+    <dt>時間</dt>
+    <dd><%= @log.duration %> 分</dd>
+    <dt>回数</dt>
+    <dd><%= @log.reps %></dd>
+    <dt>消費カロリー</dt>
+    <dd><%= @log.calories_burned %>kcal</dd>
+    <dt>メモ</dt>
+    <dd><%= @log.memo %></dd>
+  </dl>
 
   <div class="log-actions">
     <%= link_to "編集", edit_log_path(@log.id), method: :get, class: "item-red-btn" %>
