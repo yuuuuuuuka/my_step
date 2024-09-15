@@ -1,5 +1,6 @@
 class Profile < ApplicationRecord
   belongs_to :user
+  validates :weight, presence: true
 
   def bmi
     return nil if height.zero? || weight.zero?
