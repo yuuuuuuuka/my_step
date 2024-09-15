@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :move_to_index, only: [:index, :show]
-
 
   def index
     @profiles = Profile.all
@@ -10,7 +10,6 @@ class ProfilesController < ApplicationController
     @profile = Profile.new
   end
 
-  # BMI計算を実行して結果を表示
   def create
     @profile = Profile.create(profile_params)
     if @profile.height.present? && @profile.weight.present?

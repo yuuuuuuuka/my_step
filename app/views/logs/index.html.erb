@@ -6,12 +6,13 @@
 
 
       <%= link_to "投稿する", new_log_path, class: "post" %>
-      <%= link_to "記録を見る", "#", class: "post" %>
-      <%= link_to "BMI計算", new_user_profile_path(current_user.id), class: "post" %>
+       <%= link_to "記録する", "#", class: "post" %>
+      <%= link_to "記録を見る", "#", class: "post" %><!--一つにするのもあり-->
+      <%= link_to "BMI計算", new_user_profile_path(current_user.id), class: "post"if current_user.present?  %>
  <%= month_calendar(class: "custom-calendar") do |date| %>
        <div class="date">
         <%= date.day %>
-         <% @logs&.each do |log| %> <!-- @logs が nil の場合にエラーを回避 -->
+         <% @logs&.each do |log| %>
            <% if log.date == date %>
             <div class="log-entry">
              <%= link_to log.name, log_path(log), class: "post" %>
