@@ -1,7 +1,7 @@
 /*newファイル*/
 .chat-main {
   /* 全体的なスタイル */
-  width: 500px;
+  width: 800px;
   margin: 0 auto;
   padding: 20px;
   background-color: orange;
@@ -28,6 +28,8 @@ label {
 トップページ
 ********************************************************/
 
+
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #FFF8E1;
@@ -35,6 +37,7 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+
 }
 
 /* ヘッダー */
@@ -79,15 +82,26 @@ body {
   background-color: #FFAB91;
 }
 
+
+
+
+
+/********************************************************
+新規登録ページ
+********************************************************/
+
+
+
+
 /* フォームスタイル */
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
 form textarea {
-  width: 100%;
+  width: 400px;
   padding: 15px;
   margin: 10px 0;
-  border: 1px solid #FFAB91;
+  border: 1px solid #ffbba6;
   border-radius: 10px;
   font-size: 1.1rem;
   background-color: #FFF3E0;
@@ -98,7 +112,7 @@ form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="password"]:focus,
 form textarea:focus {
-  border: 1px solid #FF7043;
+  border: 1px solid #d6c7c2;
   outline: none;
 }
 
@@ -141,19 +155,25 @@ button:hover {
   background-color: #F4511E;
 }
 
-/* メインコンテンツ */
+/* メインコンテンツ
 .content {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
   background-color: #FFFDE7;
-  /* さらに淡い黄色 */
+  /* さらに淡い黄色
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} */
+
+
+
+.footer {
+  background-color: #f5f5dc;
+  /* 淡い黄色 */
+  text-align: center;
+  padding: 20px;
 }
-
-
-
 
 
 /********************************************************
@@ -179,9 +199,11 @@ body {
   text-align: center;
   border-radius: 8px;
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* トップのテキストスタイル */
 .top-text {
@@ -234,6 +256,29 @@ body {
 カレンダー
 ********************************************************/
 
+.custom-calendar {
+  width: 100%;
+  /* 横幅を全体に広げる */
+  max-width: 1200px;
+  /* 最大幅を設定 */
+  margin: 0 auto;
+  /* 中央寄せ */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* 7列のグリッドを作成（曜日に合わせて） */
+  gap: 10px;
+  /* 各日付の間隔 */
+}
+
+.custom-calendar .date {
+  padding: 10px;
+  background-color: #FFF8DC;
+  /* 各日付のデザインを指定 */
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .calendar-heading {
   /* あなたのスタイルをここに追加します */
   font-size: 20px;
@@ -265,7 +310,7 @@ body {
 }
 
 /* レスポンシブ対応 */
-@media (max-width: 600px) {
+@media (max-width: 100%) {
   .first-view {
     padding: 20px;
   }
@@ -283,6 +328,18 @@ body {
     font-size: 14px;
   }
 }
+
+@media (max-width: 768px) {
+  .custom-calendar {
+    grid-template-columns: repeat(2, 1fr);
+    /* 列数を2列に減らす */
+  }
+
+  .custom-calendar .date {
+    padding: 5px;
+  }
+}
+
 
 
 
@@ -724,6 +781,7 @@ input[type="submit"]:hover {
   /* 淡いオレンジ色 */
 }
 
+
 .table th,
 .table td {
   border: 1px solid #ddd;
@@ -744,6 +802,7 @@ input[type="submit"]:hover {
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #feeacc;
   /* 奇数行の背景色 */
+
 }
 
 

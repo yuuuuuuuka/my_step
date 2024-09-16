@@ -3,6 +3,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require chartkick
+//= require Chart.bundle
 import "@hotwired/turbo-rails"
 import "controllers"
 import "./custom_form"  // カカスタムフォーム用のJavaScriptを読み込む

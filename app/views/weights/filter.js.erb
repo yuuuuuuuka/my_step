@@ -1,0 +1,2 @@
+let chartContainer = document.getElementById('chart-container');
+chartContainer.innerHTML = "<%= escape_javascript(line_chart @filtered_weights.map { |weight_record| [weight_record.date, weight_record.weight] }) %>";

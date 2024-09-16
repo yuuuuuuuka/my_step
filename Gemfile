@@ -73,7 +73,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-   
+
 end
 
 
@@ -92,5 +92,5 @@ gem 'jquery-rails'
 gem 'mini_racer', platforms: :ruby
 gem "simple_calendar"
 gem 'sassc'
-
-
+gem 'chartkick'
+gem 'groupdate'
