@@ -22,7 +22,7 @@ class WeightsController < ApplicationController
   def create
     @weight = current_user.weights.build(weight_params)
     if @weight.save
-      redirect_to weights_path, notice: '体重を記録しました。'
+      redirect_to root_path
     else
       render :new
     end
@@ -31,6 +31,6 @@ class WeightsController < ApplicationController
   private
 
   def weight_params
-    params.require(:weight).permit(:date, :weight)
+    params.require(:weight).permit(:date, :weight).merge(user_id: current_user.id)
   end
 end

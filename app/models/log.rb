@@ -8,10 +8,7 @@ class Log < ApplicationRecord
 
   def calculate_calories
     user_weight = user.profile&.weight
-    if user_weight.nil?
-      errors.add(:user, 'プロフィールが設定されていません')
-      return
-    end
+    errors.add(:user, 'BMIが設定されていません') if user_weight.nil? && user_weight.nil?
     calories_per_minute = case name
                           when 'ランニング'
                             10 # 1分あたり10kcal消費

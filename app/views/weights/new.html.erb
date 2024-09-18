@@ -2,7 +2,7 @@
 <div class = "weight-chat-main">
 <h1 class="form-title">体重を記録する</h1>
 
-<%= form_with model: @weight, local: true, class: "weight-form" do |form| %>
+<%= form_with model: @weight, local: true, data: { turbo: true }, class: "weight-form" do |form| %>
   <div class="form-group">
     <%= form.label :date, "日付", class: "form-label" %>
     <%= form.date_field :date, class: "form-control" %>
