@@ -91,16 +91,16 @@ body {
 ********************************************************/
 
 
-
-
 /* フォームスタイル */
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
 form textarea {
-  width: 400px;
+  width: 100%;
+  /* フォーム全体に合わせる */
   padding: 15px;
   margin: 10px 0;
+  /* 上下にマージン、左右は0 */
   border: 1px solid #ffbba6;
   border-radius: 10px;
   font-size: 1.1rem;
@@ -112,7 +112,7 @@ form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="password"]:focus,
 form textarea:focus {
-  border: 1px solid #d6c7c2;
+  border: 1px sol id #d6c7c2;
   outline: none;
 }
 
@@ -125,13 +125,11 @@ form textarea {
 .user-name {
   font-family: 'Arial', sans-serif;
   font-size: 1.5rem;
-  color: #333;
+  width: 300px;
   /* ユーザー名の文字色 */
   text-align: center;
 
   padding: 10px;
-
-
 }
 
 .user-name span {
@@ -155,18 +153,26 @@ button:hover {
   background-color: #F4511E;
 }
 
-/* メインコンテンツ
-.content {
-  max-width: 800px;
-  margin: 40px auto;
+/* メインコンテンツ */
+.contents {
+  display: flex;
+  justify-content: center;
+  /* 中央配置 */
+  align-items: center;
+  /* 垂直方向の中央配置 */
+  height: 100vh;
+  /* 画面の高さを利用 */
+}
+
+.login-container {
+  width: 80%;
+  /* フォームの幅を調整 */
+  max-width: 600px;
   padding: 20px;
-  background-color: #FFFDE7;
-  /* さらに淡い黄色
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-} */
-
-
+}
 
 .footer {
   background-color: #f5f5dc;
@@ -174,6 +180,71 @@ button:hover {
   text-align: center;
   padding: 20px;
 }
+
+/********************************************************
+ログインページ
+********************************************************/
+
+
+.login-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff8e1
+    /* 淡い黄色 */
+}
+
+.session-title {
+  margin: 0 auto;
+  /* 中央配置 */
+  text-align: center;
+  /* 文字を中央揃え */
+  color: #333;
+  font-size: 2rem;
+  /* 文字サイズを大きく */
+}
+
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+  margin-bottom: 15px;
+  margin-right: 100px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  /* カラーコード修正 */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: po inter;
+}
+
+
 
 
 /********************************************************
@@ -191,17 +262,6 @@ body {
   color: #333;
 }
 
-/* ファーストビュー全体のデザイン */
-.first-view {
-  background-color: #FFE4B5;
-  /* Moccasin */
-  padding: 40px;
-  text-align: center;
-  border-radius: 8px;
-  margin: 20px auto;
-  max-width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 
 
@@ -211,6 +271,7 @@ body {
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
+
 }
 
 /* メニューコンテンツ全体 */
@@ -220,11 +281,13 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
 }
 
 /* 見出しのデザイン */
 .heading-name {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   color: #555;
   margin-bottom: 20px;
@@ -234,6 +297,7 @@ body {
 .post {
   display: inline-block;
   background-color: #FFD700;
+
   /* ゴールド */
   color: #333;
   padding: 12px 24px;
@@ -346,14 +410,7 @@ body {
 /********************************************************
 logs/new
 ********************************************************/
-body {
-  background-color: #FFF8DC;
-  /* Cornsilk */
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+
 
 /* メインコンテナ */
 .chat-main {
@@ -559,138 +616,76 @@ input[type="submit"]:hover {
 ********************************************************/
 
 
-/* ログ詳細の全体レイアウト */
-.log-details {
-  background-color: #FFFAF0;
-  /* Floral White */
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 40px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-/* 各ログ項目のスタイル */
-.log-item {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-/* ログアクションボタンのスタイル */
-.log-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-/* 編集ボタンのスタイル */
-.item-red-btn {
-  background-color: #FFCC00;
-  /* 濃い黄色 */
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.item-red-btn:hover {
-  background-color: #FFD700;
-  /* ゴールド */
-}
-
-/* 削除ボタンのスタイル */
-.item-destroy {
-  background-color: #FF6347;
-  /* Tomato */
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.item-destroy:hover {
-  background-color: #FF4500;
-  /* OrangeRed */
-}
-
-/* 戻るボタンのスタイル */
-.item-back {
-  background-color: #FFF8DC;
-  /* Cornsilk */
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.item-back:hover {
-  background-color: #FFD700;
-  /* ゴールド */
-}
-
-/* レスポンシブ対応 */
-
-
-
-
 
 
 .log-details {
-  background-color: #F5F5DC;
-  /* 淡い黄色 */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+
+}
+
+.title-tpo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .log-list {
-  text-align: center;
-  /* 全体を中央揃え */
+  margin: 0;
+  padding: 0;
   list-style: none;
-  /* デフォルトのリストマーカーを非表示 */
-  padding: 20px;
-  background-color: #F5F5DC;
-  /* 淡い黄色 */
-  border-radius: 10px;
-  /* 角を丸くして可愛く */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  /* 影をつける */
+}
+
+.log-list dt,
+.log-list dd {
+  display: inline-block;
+  width: 40%;
+  margin-bottom: 5px;
 }
 
 .log-list dt {
   font-weight: bold;
-  color: #666;
-  /* 暗めの色で落ち着いた印象 */
-  margin-bottom: 10px;
 }
 
 .log-list dd {
-  font-size: 1.2em;
-  color: #333;
-  /* 数字を強調 */
+  text-align: right;
 }
 
+.log-actions {
+  margin-top: 20px;
+  text-align: center;
+}
 
 .item-red-btn,
 .item-destroy,
 .item-back {
-  background-color: #FFD700;
-  /* ゴールド */
-  color: #333;
-  /* その他のスタイル */
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
+.item-red-btn {
+  background-color: #ff6961;
+  color: #fff;
+}
 
+.item-destroy {
+  background-color: #ccc;
+  color: #333;
+}
 
-
-
-
+.item-back {
+  background-color: #ddd;
+  color: #333;
+}
 
 /********************************************************
  profiles/new
@@ -876,4 +871,130 @@ input[type="submit"]:hover {
 
 .btn:hover {
   background: #4f818a;
+}
+
+.chat-main {
+  height: 100vh;
+  /* 画面の高さを利用 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5dc;
+  /* 淡い黄色 */
+}
+
+.container {
+  width: 80%;
+  /* フォームの幅を調整 */
+  max-width: 600px;
+  /* 最大幅を設定 */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  /* 青色のボタン */
+  color: #fff
+}
+
+
+
+
+
+/********************************************************
+ weights/new
+********************************************************/
+
+.weight-chat-main {
+  text-align: center;
+  height: 100vh;
+
+
+}
+
+.weight-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/********************************************************
+ weights/index
+********************************************************/
+
+
+.weight-records-title {
+  color: #333;
+  /* 黒色 */
+  font-size: 24px;
+  text-align: center;
+}
+
+.weight-filter-form {
+  background-color: #fff;
+  /* 白色 */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weight-chart-container {
+  background-color: #f5f5f5;
+  /* 淡い灰色 */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart {
+  /* グラフのスタイル */
+  fill: #4CAF50;
+  /* 緑色 */
+  stroke: #333;
+  /* 黒色 */
+}
+
+.filter-button {
+  width: 80px;
+  /* 横幅を80pxに設定 */
+  /* その他のスタイルは必要に応じて調整 */
 }

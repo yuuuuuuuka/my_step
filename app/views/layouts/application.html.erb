@@ -18,8 +18,6 @@
         <nav class="nav grid-item grid-6">
           <% if user_signed_in? %>
             <div class="user_nav grid-item grid-6">
-              <%#>=<div class ="user-name">
-              <span><%= current_user.name %>
                 <div class="auth_nav grid-item grid-6">
 
 
@@ -30,9 +28,11 @@
               <%= link_to "ログイン", new_user_session_path, class: "button post" %>
               <%= link_to "新規登録", new_user_registration_path, class: "button post" %>
             </div>
+
           <% end %>
         </nav>
       </div>
+        </main>
     </header>
 
     <main class="content">
@@ -43,6 +43,6 @@
         <p>© 2023 MyStep</p>
       </div>
     </footer>
-    </main>
+
   </body>
 </html>

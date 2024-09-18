@@ -28,6 +28,6 @@ class Log < ApplicationRecord
                           end
 
     # 消費カロリーを計算 (運動時間×体重の調整×運動係数)
-    self.calories_burned = calories_per_minute * duration * (user_weight / 50.0)
+    self.calories_burned = (calories_per_minute || 0) * (duration || 0) * ((user_weight || 50) / 50.0)
   end
 end

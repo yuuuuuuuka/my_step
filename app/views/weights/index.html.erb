@@ -1,8 +1,14 @@
-<h1>Weight Records</h1>
 
-<%= form_with url: filter_weights_path, method: :get, remote: true do |form| %>
-  <%= form.select :period, options_for_select([['1 Week', '1_week'], ['1 Month', '1_month'], ['3 Months', '3_months']]), prompt: 'Select Period' %>
-  <%= form.submit 'Filter' %>
+<h1 class="weight-records-title">Weight Records</h1>
+
+<%= form_with url: weights_path, method: :get, data: { turbo_stream: true }, class: "weight-filter-form" do |form| %>
+  <div class="form-group">
+    <%= form.label :period, 'Select Period', class: "period-label" %>
+    <%= form.select :period, options_for_select([['1 Week', '1_week'], ['1 Month', '1_month'], ['3 Months', '3_months']]), prompt: 'Select Period', class: "period-select" %>
+  </div>
+  <%= form.submit '変更する', class: "filter-button" %>
 <% end %>
 
-<%= render 'chart', weights: @weights %>
+<div class="weight-chart-container">
+  <%= render 'chart', weights: @weights %>
+</div>

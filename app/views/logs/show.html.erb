@@ -1,5 +1,5 @@
 
-
+<div class = "show-main-chat">
 <div class="log-details">
   <h1 class="title-tpo">本日の成果</h1>
   <dl class="log-list">
@@ -22,4 +22,5 @@
     <%= link_to "削除", log_path(@log.id), data: { turbo_method: :delete }, class: "item-destroy" %>
     <%= link_to "戻る", logs_path, class: "item-back" %>
   </div>
+</div>
 </div>

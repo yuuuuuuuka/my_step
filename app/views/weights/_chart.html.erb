@@ -1,4 +1,4 @@
 
-<div id="chart-container">
-  <%= line_chart @weights.map { |weight_record| [weight_record.date, weight_record.weight] } %>
-</div>
+<turbo-frame id="chart-container">
+  <%= line_chart weights.map { |weight_record| [weight_record.date, weight_record.weight] } %>
+</turbo-frame>

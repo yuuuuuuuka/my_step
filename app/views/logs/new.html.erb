@@ -1,7 +1,8 @@
-<div class="chat-main">
-  <div class="container">
+<div class="containe44r">
     <h1>運動記録投稿</h1>
-  </div>
+
+<div class="chat-main">
+
   <%= form_with model: @log, url:logs_path, id: 'new_user', class: 'new_user', local: true, data: { turbo: false } do |form| %>
 
   <% if @log.errors.any? %>
@@ -46,5 +47,5 @@
 
   <% end %>
 
-
+</div>
 </div>
