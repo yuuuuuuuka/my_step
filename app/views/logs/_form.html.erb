@@ -1,0 +1,25 @@
+<div class="form-box">
+  <div class="form-group">
+    <%= form.label :date, "日付", class: "form-label" %>
+    <%= form.date_field :date, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :name, "運動名      (必須)", class: "form-label" %>
+      <%= form.select :name,  [["ランニング", "ランニング"],["散歩", "散歩"], ["縄跳び", "縄跳び"], ["腹筋", "腹筋"], ["プランク", "プランク"],["その他", "その他"]], class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :duration, "運動時間（分）", class: "form-label" %>
+    <%= form.number_field :duration, min: 0, placeholder: "例：30", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :reps, "回数", class: "form-label" %>
+    <%= form.number_field :reps, min: 0, placeholder: "例：10", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :memo, "メモ", class: "form-label" %>
+    <%= form.text_area :memo, rows: 3, placeholder: "記録したいこと", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.submit submit_label, class: "btn btn-primary" %>
+  </div>
+</div>

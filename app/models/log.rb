@@ -9,9 +9,10 @@ class Log < ApplicationRecord
   def calculate_calories
     user_weight = user.profile&.weight
     if user_weight.nil?
-      errors.add(:user, 'プロフィールが設定されていません')
+      errors.add(:user, 'ユーザーの体重が設定されていません')
       return
     end
+
     calories_per_minute = case name
                           when 'ランニング'
                             10 # 1分あたり10kcal消費
@@ -28,6 +29,6 @@ class Log < ApplicationRecord
                           end
 
     # 消費カロリーを計算 (運動時間×体重の調整×運動係数)
-    self.calories_burned = calories_per_minute * duration * (user_weight / 50.0)
+    self.calories_burned = (calories_per_minute || 0) * (duration || 0) * ((user_weight || 50) / 50.0)
   end
 end

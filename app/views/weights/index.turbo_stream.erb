@@ -1,0 +1,3 @@
+<%= turbo_stream.replace 'chart-container' do %>
+  <%= render partial: 'chart', locals: { weights: @weights } %>
+<% end %>

@@ -9,4 +9,5 @@ class User < ApplicationRecord
 
   has_many :logs
   has_one :profile
+  has_many :weights
 end

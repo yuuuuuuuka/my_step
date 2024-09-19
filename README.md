@@ -47,6 +47,7 @@ belongs_to:user
 weightsテーブル
 
 | Column         | Type       | Options                        |
+| ------         | ---------- | ------------------------------ |
 | user           | references | null: false, foreign_key: true |
 | date           |  date      | null: false                    |
 | weight         | float        | null: false |

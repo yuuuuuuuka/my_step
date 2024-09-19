@@ -1,6 +1,7 @@
 
 <div class="chat-main">
   <div class="container">
+    <div class = "bmi-title"><h1>BMI計算</h1><div>
 <%= form_with(model: @profile, url: user_profiles_path(current_user), local: true) do |form| %>
 
   <div class="form-group">
@@ -14,6 +15,7 @@
   <div class="form-group">
     <%= submit_tag "BMIを計算", class: "btn btn-primary" %>
   </div>
+ </div>
 <% end %>
-  </div>
+
 </div>

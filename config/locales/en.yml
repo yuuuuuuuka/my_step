@@ -30,4 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  simple_calendar:
+    previous: "<<"  # 前の月
+    today: "Today"      # 今日に戻る
+    next: ">>"      # 次の月

@@ -1,32 +1,30 @@
+<div class="login-main">
 
-<div class ="login-main">
-  <div class="contents row">
-    <div class="container">
+  <div class="container">
+    <div class="session-title">
     <h2>Log in</h2>
-    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-    <%= render 'devise/shared/error_messages',model: @user %>
+  </div>
+    <form class="new-user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post">
+      <ul>
+        <%= render 'devise/shared/error_messages', model: @user %>
+      </ul>
       <div class="field">
-         
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true %>
+        <label for="user_email">Email</label>
+        <input type="email" name="user[email]" id="user_email" autofocus="autofocus" />
       </div>
-
       <div class="field">
-        <%= f.label :password %>
-        <%= f.password_field :password, autocomplete: "off" %>
+        <label for="user_password">Password</label>
+        <input type="password" name="user[password]" id="user_password" autocomplete="off" />
       </div>
-
       <% if devise_mapping.rememberable? %>
         <div class="field">
-          <%= f.label :remember_me %>
-          <%= f.check_box :remember_me %>
+          <label for="user_remember_me">Remember me</label>
+          <input type="checkbox" name="user[remember_me]" id="user_remember_me" />
         </div>
-      <% end -%>
-
+      <% end %>
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <input type="submit" name="commit" value="Log in" />
       </div>
-    <% end %>
+    </form>
   </div>
 </div>
-
