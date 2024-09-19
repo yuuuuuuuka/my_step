@@ -5,8 +5,7 @@
   <div class="form-group">
 
     <%= form.select :period, options_for_select([['1 Week', '1_week'], ['1 Month', '1_month'], ['3 Months', '3_months']]), prompt: 'Select Period' %>
-    <%#>= form.label :period, 'Select Period', class: "period-label" %>
-    <%#>= form.select :period, options_for_select([['1 Week', '1_week'], ['1 Month', '1_month'], ['3 Months', '3_months']]), prompt: 'Select Period', class: "period-select" %>
+
   </div>
   <%= form.submit '選択', class: "filter-button" %>
 <% end %>

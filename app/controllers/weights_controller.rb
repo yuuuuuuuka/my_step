@@ -5,11 +5,11 @@ class WeightsController < ApplicationController
     period = params[:period]
     @weights = case period
                when '1_week'
-                 current_user.weights.where('date >= ?', 1.week.ago).select(:date, :weight).order(:date)
+                 current_user.weights.where(date: 6.days.ago.to_date..Time.zone.today).select(:date, :weight).order(:date)
                when '1_month'
-                 current_user.weights.where('date >= ?', 1.month.ago).select(:date, :weight).order(:date)
+                 current_user.weights.where(date: 29.days.ago.to_date..Time.zone.today).select(:date, :weight).order(:date)
                when '3_months'
-                 current_user.weights.where('date >= ?', 3.months.ago).select(:date, :weight).order(:date)
+                 current_user.weights.where(date: 90.days.ago.to_date..Time.zone.today).select(:date, :weight).order(:date)
                else
                  current_user.weights.select(:date, :weight).order(:date)
                end

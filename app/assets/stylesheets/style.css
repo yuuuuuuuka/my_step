@@ -1,69 +1,15 @@
-/*newファイル*/
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  /* 親要素の高さを100%にする */
-}
-
-.chat-main {
-  /* 全体的なスタイル */
-  width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: orange;
-  text-align: center;
-  margin-top: 100px;
-}
-
-.chat-main h1 {
-  font-size: 30px;
-  color: rgb(19, 19, 36);
-}
-
-.form-group {
-  margin-bottom: 10px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-}
-
-
-/********************************************************
-トップページ
-********************************************************/
-
-
-
+/* グローバルスタイル */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #FFF8E1;
-  /* 淡い黄色 */
   color: #333;
   margin: 0;
   padding: 0;
-
 }
 
 /* ヘッダー */
 .header {
-  background-color: #FFCC80;
+  background-color: #FFD700;
   /* オレンジ系統 */
   padding: 20px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -85,15 +31,11 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-
 }
 
 .nav a {
-  margin-left: 15px;
-  font-size: 1.2rem;
   color: #D84315;
   text-decoration: none;
-  background-color: #FFE0B2;
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -103,8 +45,29 @@ body {
   background-color: #FFAB91;
 }
 
+/* チャット部分 */
+.chat-main {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: orange;
+  text-align: center;
+  margin-top: 100px;
+}
 
+.chat-main h1 {
+  font-size: 30px;
+  color: rgb(90, 90, 151);
+}
 
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
 
 
 /********************************************************
@@ -426,199 +389,63 @@ body {
 logs/new
 ********************************************************/
 
-
-/* メインコンテナ */
-.chat-main {
+/* ログインフォーム */
+.login-form {
+  width: 80%;
   max-width: 600px;
-  margin: 40px auto;
   padding: 20px;
-  background-color: #FFFAF0;
-  /* Floral White */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  /* 中央配置 */
 }
 
-/* 見出しのスタイル */
-h1 {
-  text-align: center;
-  color: #333;
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-
-/* フォーム全体のスタイル */
-.form-group {
-  margin-bottom: 20px;
-}
-
-select {
-  height: 38px;
-  /* 他の入力要素と同じ高さに調整 */
-  padding: 6px 12px;
-  /* 内側の余白を調整 */
-  /* その他必要なスタイル */
-}
-
-/* 各フォームラベル */
-.form-group label {
+.login-form label {
   display: block;
-  margin-bottom: 8px;
   font-weight: bold;
-  color: #555;
 }
 
-/* テキストフィールド、ナンバーフィールド、日付フィールド */
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group input[type="date"],
-.form-group textarea {
+.login-form input {
+
   width: 100%;
   padding: 10px;
-  border: 1px solid #DDD;
+  border: 1px solid #cccccc;
   border-radius: 4px;
-  background-color: #FFF8DC;
-  /* Cornsilk */
-  font-size: 16px;
-  color: #333;
   box-sizing: border-box;
 }
 
-/* テキストエリアのスタイル */
-.form-group textarea {
-  resize: vertical;
+.login-form input[type="submit"] {
+  background-color: #3498db;
+  color: #fff;
 }
 
-/* サブミットボタンのスタイル */
-input[type="submit"] {
-  display: block;
-  width: 100%;
-  background-color: #FFD700;
-  /* ゴールド */
-  color: #333;
-  padding: 12px 0;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-input[type="submit"]:hover {
-  background-color: #FFCC00;
-  /* 濃い黄色 */
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-  .chat-main {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  input[type="submit"] {
-    font-size: 16px;
-  }
-}
-
-
-/* ログ詳細の全体レイアウト */
-.log-details {
+/* メニューコンテンツ */
+.menu-content {
   background-color: #FFFAF0;
-  /* Floral White */
   padding: 20px;
   border-radius: 8px;
-  max-width: 600px;
-  margin: 40px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 見出し */
+.heading-name {
+  font-size: 40px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ゴールドのボタン */
+.gold-btn {
+  @extend .btn;
+  background-color: #FFD700;
   color: #333;
 }
 
-/* 各ログ項目のスタイル */
-.log-item {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-/* ログアクションボタンのスタイル */
-.log-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-/* 編集ボタンのスタイル */
-.item-red-btn {
+.gold-btn:hover {
   background-color: #FFCC00;
-  /* 濃い黄色 */
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.item-red-btn:hover {
-  background-color: #FFD700;
-  /* ゴールド */
-}
-
-/* 削除ボタンのスタイル */
-.item-destroy {
-  background-color: #FF6347;
-  /* Tomato */
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.item-destroy:hover {
-  background-color: #FF4500;
-  /* OrangeRed */
-}
-
-/* 戻るボタンのスタイル */
-.item-back {
-  background-color: #FFF8DC;
-  /* Cornsilk */
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.item-back:hover {
-  background-color: #FFD700;
-  /* ゴールド */
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-  .log-details {
-    padding: 15px;
-  }
-
-  .log-item {
-    font-size: 16px;
-  }
-
-  .log-actions {
-    flex-direction: column;
-  }
-
-  .log-actions a {
-    margin-bottom: 10px;
-  }
 }
 
 
@@ -629,22 +456,23 @@ input[type="submit"]:hover {
 /********************************************************
  show
 ********************************************************/
-
-
-
-
 .log-details {
-  background-color: #fff;
+  height: 100vh;
+  margin-top: 20%;
+
+}
+
+.logs_warppoer {
+  background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   margin: 0 auto;
-  max-width: 400px;
-
+  max-width: 500px;
 }
 
 .title-tpo {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
@@ -672,7 +500,7 @@ input[type="submit"]:hover {
 }
 
 .log-actions {
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -732,7 +560,7 @@ input[type="submit"]:hover {
 }
 
 .bmi-result-container div {
-  background-color: #f5f5dc;
+  background-color: #f7f7f7;
   /* ベージュ色 */
   border: 2px solid #e0e0c8;
   /* ベージュに近い色で囲む */
@@ -746,6 +574,8 @@ input[type="submit"]:hover {
   text-align: center;
   /* テキスト中央寄せ */
 }
+
+
 
 .bmi-result-title {
   font-size: 36px;
@@ -894,7 +724,13 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5dc;
+  max-width: 600px;
+  /* 最大幅を設定 */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
   /* 淡い黄色 */
 }
 
@@ -1005,4 +841,87 @@ input[type="submit"]:hover {
   width: 80px;
   /* 横幅を80pxに設定 */
   /* その他のスタイルは必要に応じて調整 */
+}
+
+/********************************************************
+ weights/new
+********************************************************/
+
+
+.weit_warppoer {
+  background-color: #f5f5dc;
+  /* 淡い黄色 */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* 少し影をつける */
+}
+
+.form-title {
+  text-align: center;
+  color: #333;
+}
+
+.weight-chat-main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.weight-form {
+  background-color: #fff;
+  /* フォーム部分を白で区切る */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.weight-form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.weight-form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #4CAF50;
+  /* 緑色 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/********************************************************
+ weights/index
+********************************************************/
+
+.weight-filter-form {}
+
+select {
+
+  margin-top: 39px;
+  width: 200px;
+  /* 幅を150pxに設定 */
+  height: 59px;
+  /* 親要素内で水平方向に中央配置 */
+}
+
+.weight_filter-button {
+  /* ボタンの幅 */
+  width: 100%;
+  /* 調整してください */
+  /* 中央配置 */
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 30px;
+
 }
