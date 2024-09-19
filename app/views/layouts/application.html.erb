@@ -8,6 +8,10 @@
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_importmap_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <header class="header">
@@ -17,7 +21,7 @@
         </h1>
         <nav class="nav grid-item grid-6">
           <% if user_signed_in? %>
-          <div class="user_nav grid-item grid-6">
+          <div class="user_name">
                 <%= current_user.name%></div>
 
                 <div class="auth_nav grid-item grid-6">
@@ -33,11 +37,16 @@
           <% end %>
         </nav>
       </div>
-        </main>
     </header>
 
     <main class="content">
       <%= yield %>
+        </main>
+
+          <footer class="footer">
+      <p class="footer-text">© 2024 MyStep</p>
+    </footer>
+
 
 
   </body>

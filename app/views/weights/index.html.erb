@@ -1,7 +1,8 @@
 
-<h1 class="weight-records-title">Weight Records</h1>
+
 
 <%= form_with url: weights_path, method: :get, data: { turbo_stream: true }, class: "weight-filter-form" do |form| %>
+<h1 class="weight-records-title">Weight Records</h1>
   <div class="form-group">
 
     <%= form.select :period, options_for_select([['1 Week', '1_week'], ['1 Month', '1_month'], ['3 Months', '3_months']]), prompt: 'Select Period' %>
