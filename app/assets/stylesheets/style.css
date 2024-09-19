@@ -775,6 +775,20 @@ logs/new
 
 }
 
+.weit_warppoer {
+  /* 既存のスタイル */
+  background-image: url('<%= image_path "istockphoto-682336824-1024x1024.jpg" %>');
+  /* 画像のパスを調整 */
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .chat-main {
+    background-size: contain;
+    /* 画像がコンテナ内に収まるように設定 */
+  }
+}
 
 
 .form-group {
