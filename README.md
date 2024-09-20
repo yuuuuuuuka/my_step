@@ -25,70 +25,39 @@ my_step
 ## 利用方法
 
 1、ログインページで新規登録を行う
-https://i.gyazo.com/7aef8c4c9fc9d0a7a4fd145e85589095.mp4
-2、投稿するボタンを押すと運動した「日付、運動名を選択、時間、回数、メモ」を入力する
-3、カレンダーを押すと運動した内容の詳細ページへ遷移する
+[![Image from Gyazo](https://i.gyazo.com/1b561d81034b483ddc880d4f3a7bfb35.gif)](https://gyazo.com/1b561d81034b483ddc880d4f3a7bfb35)
 
+2、投稿するボタンを押すと運動した「日付、運動名を選択、時間、回数、メモ」を入力する
+[![Image from Gyazo](https://i.gyazo.com/637a0b1e9588d8eb3be7a331271c0f71.gif)](https://gyazo.com/637a0b1e9588d8eb3be7a331271c0f71)
+投稿するを押すとカレンダーに表示される
+
+
+3、カレンダーを押すと運動した内容の詳細ページへ遷移する
+[![Image from Gyazo](https://i.gyazo.com/668aec7fc3b834606d811f1cceab3c92.png)](https://gyazo.com/668aec7fc3b834606d811f1cceab3c92)
 4、記録するボタンで体重を記録し記録を見るを押すと過去のデータがグラフとして表示される
+[![Image from Gyazo](https://i.gyazo.com/0e3d736ddf652344047d3b48f20db978.png)](https://gyazo.com/0e3d736ddf652344047d3b48f20db978)
+[![Image from Gyazo](https://i.gyazo.com/6ee2bf364ba8761cd1f47383184bf9d0.gif)](https://gyazo.com/6ee2bf364ba8761cd1f47383184bf9d0)
 
 5、身長と体重を入力するとBMI計算がされる
 
+[![Image from Gyazo](https://i.gyazo.com/6c5b4bd6b0298318f119d7aecf5fbe91.gif)](https://gyazo.com/6c5b4bd6b0298318f119d7aecf5fbe91)
 
 
 
 
 
+## 工夫した点
+・運動した記録がすぐわかるようにカレンダーで内容が見やすく表示させたところ
+・記録した体重を期間ごとに分けることによって、ユーザーにより詳細な体重の変化をグラフで見ることができる
 
 
+## 実装予定の機能
+・セットメニュー機能
+部位によって用意されているメニューを作ることで、ユーザーがなんの運動をするかを考えることなく始められる
+・
 
-## User名
+## 改善点
+デザインがシンプルすぎるので、イラストにすることでよりユーザーが瞬時に理解できるようにする
 
-| Column               | Type   | Options     |
-| ------------------   | ------ | ----------- |
-| name                 | string | null: false |
-| email                | string | null: false,unique: true |
-| encrypted_password   | string | null: false |
- has many :logs
- has_one :profile,dependent: :destroy
-has_many :weights, dependent: :destroy
-
-
-## profileテーブル
-| Column               | Type       | Options     |
-| -----------------    | ------     | ----------- |
-| user                 | references | null: false, foreign_key: true |
-| height               | float        |  |
-| weight               | float        | null: false |
-| goal_weight          | float        | |
-belongs_to :user
-
-
-
-
-##　Logsテーブル
-
-| Column         | Type       | Options                        |
-| ------         | ---------- | ------------------------------ |
-| user           | references | null: false, foreign_key: true |
-| name           | string     | null: false                    |
-| date           |  date      | null: false                    |
-| duration       | int        | null: false, greater_than_or_equal_to: 0 |
-| reps           | int        | null: false, greater_than:0    |
-| memo           | text       |                                |
-### モデルの関連付け
-belongs_to:user
-
-
-
-
-weightsテーブル
-
-| Column         | Type       | Options                        |
-| ------         | ---------- | ------------------------------ |
-| user           | references | null: false, foreign_key: true |
-| date           |  date      | null: false                    |
-| weight         | float        | null: false |
-
-
- ### モデルの関連付け
-belongs_to :user
+・入力欄が多いことで、ユーザーが打つのが面倒になる。
+マイページなどに普段行う運動内容を保存しておく機能があると良いと思いました
