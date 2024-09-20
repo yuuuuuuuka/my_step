@@ -517,13 +517,17 @@ logs/new
   padding: 20px;
   margin: 0 auto;
   max-width: 500px;
+  margin-top: 50px;
 }
 
 .title-tpo {
-  font-size: 40px;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
   margin-bottom: 15px;
   text-align: center;
+  color: #007bff;
+
 }
 
 .log-list {
@@ -537,6 +541,7 @@ logs/new
   display: inline-block;
   width: 40%;
   margin-bottom: 5px;
+  font-size: x-large
 }
 
 .log-list dt {
@@ -561,6 +566,8 @@ logs/new
   border-radius: 5px;
   cursor: pointer;
   margin-right: 10px;
+  text-decoration: none;
+
 }
 
 .item-red-btn {
@@ -967,10 +974,13 @@ h3 {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
+  width: 200px;
+
 }
 
 .weight-table tr:nth-child(even) {
   background-color: #e8ffe1;
+
 }
 
 /********************************************************
@@ -979,9 +989,7 @@ h3 {
 
 
 select {
-
-  margin-top: 39px;
-  width: 200px;
+  width: 300px;
   /* 幅を150pxに設定 */
   height: 59px;
   /* 親要素内で水平方向に中央配置 */

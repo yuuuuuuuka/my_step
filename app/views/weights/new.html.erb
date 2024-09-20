@@ -25,7 +25,7 @@
        <h1 class="form-title">今までのデータ</h1>
       <% @user_weights.each do |weight| %>
         <tr>
-          <td><%= weight.date.strftime("%m-%d") %></td>
+          <td><%= weight.date.strftime("%m/%d") %></td>
           <td><%= weight.weight %></td>
         </tr>
       <% end %>

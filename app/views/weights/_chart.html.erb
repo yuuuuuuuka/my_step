@@ -1,5 +1,5 @@
 
 <turbo-frame id="chart-container">
-  <%= line_chart weights.map { |weight_record| [weight_record.date, weight_record.weight] } %>
-  <%#>=#line_chart weights.map { |weight_record| [weight_record.date, weight_record.weight] } %>
+  <%= line_chart weights.map { |weight_record| [weight_record.date, weight_record.weight] },curve: false %>
+
 </turbo-frame>
