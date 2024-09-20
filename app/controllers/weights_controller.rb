@@ -17,6 +17,7 @@ class WeightsController < ApplicationController
 
   def new
     @weight = Weight.new
+    @user_weights = current_user.weights.all.order(:date)
   end
 
   def create

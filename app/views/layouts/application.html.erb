@@ -21,15 +21,19 @@
         </h1>
         <nav class="nav grid-item grid-6">
           <% if user_signed_in? %>
+          <div class="user-section">
           <div class="user_name">
-                <%= current_user.name%></div>
 
-                <div class="auth_nav grid-item grid-6">
+                <%= current_user.name%>
+                </div>
+
+                <div class="auth_nav">
               <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "button" %>
             </div>
+           </div>
 
           <% else %>
-            <div class="auth_nav grid-item grid-6">
+            <div class="auth_nav">
               <%= link_to "ログイン", new_user_session_path, class: "button post" %>
               <%= link_to "新規登録", new_user_registration_path, class: "button post" %>
             </div>

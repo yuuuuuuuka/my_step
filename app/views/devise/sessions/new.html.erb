@@ -8,18 +8,20 @@
       <ul>
         <%= render 'devise/shared/error_messages', model: @user %>
       </ul>
-      <div class="field">
+      <div class="form-group">
         <label for="user_email">Email</label>
         <input type="email" name="user[email]" id="user_email" autofocus="autofocus" />
       </div>
-      <div class="field">
+      <div class="form-group">
         <label for="user_password">Password</label>
         <input type="password" name="user[password]" id="user_password" autocomplete="off" />
       </div>
       <% if devise_mapping.rememberable? %>
-        <div class="field">
+      <div class="form-group">
+        <div class ="remember_box">
           <label for="user_remember_me">Remember me</label>
           <input type="checkbox" name="user[remember_me]" id="user_remember_me" />
+          </div>
         </div>
       <% end %>
       <div class="actions">

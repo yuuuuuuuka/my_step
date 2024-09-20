@@ -14,6 +14,23 @@
         <div class="form-group">
         <%= form.submit "記録する", class: "btn btn-primary" %>
           </div>
+         <table class="weight-table">
+    <thead>
+      <tr>
+        <th>日付</th>
+        <th>体重 (kg)</th>
+      </tr>
+    </thead>
+    <tbody>
+       <h1 class="form-title">今までのデータ</h1>
+      <% @user_weights.each do |weight| %>
+        <tr>
+          <td><%= weight.date.strftime("%m-%d") %></td>
+          <td><%= weight.weight %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
     <% end %>
   </div>
 </div>
