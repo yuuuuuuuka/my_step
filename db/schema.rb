@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_16_025630) do
     t.integer "reps", null: false
     t.integer "duration", null: false
     t.text "memo"
-    t.string "name", null: false
+    t.string "name", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "calories_burned"
