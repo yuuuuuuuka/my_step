@@ -63,8 +63,11 @@ main {
 }
 
 .chat-main h1 {
+
+  color: rgb(253, 114, 114);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   font-size: 50px;
-  color: rgb(117, 180, 83);
 }
 
 .form-group {
@@ -233,7 +236,7 @@ button:hover {
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 .field {
@@ -350,6 +353,19 @@ body {
 /********************************************************
 カレンダー
 ********************************************************/
+.calendar-title {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 30px;
+  color: #50a5f0;
+  /* ビビッドなピンク */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  /* 白い影で立体感を出す */
+
+  /* 淡い黄色 */
+
+
+}
+
 
 .custom-calendar {
   width: 100%;
@@ -702,7 +718,7 @@ logs/new
 
 
 .bmi-title h1 {
-  background-image: url('/assets/f1408_1 (1).jpg');
+  background-image: url('/assets/f0810_2.jpg');
   /* 背景画像を指定 */
   background-size: cover;
   /* 画像をコンテナ全体に拡大 */
@@ -710,7 +726,7 @@ logs/new
   /* 画像を中央に配置 */
   padding: 40px;
 
-  color: rgb(101, 209, 255);
+  color: rgb(41, 186, 248);
   /* テキストカラーを白に設定 */
   text-align: center;
   /* テキストを中央揃え */
@@ -1007,6 +1023,7 @@ h3 {
 
 
 select {
+  margin-top: 40px;
   width: 300px;
   /* 幅を150pxに設定 */
   height: 59px;
@@ -1030,7 +1047,5 @@ select {
   font-size: 50px;
   color: #35bcff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  background-image: url('<%= asset_path("f0810_2.jpg") %>');
-  background-size: contain;
 
 }

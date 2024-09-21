@@ -25,6 +25,7 @@ class WeightsController < ApplicationController
     if @weight.save
       redirect_to root_path
     else
+      @user_weights = current_user.weights.order(date: :desc)
       render :new
     end
   end

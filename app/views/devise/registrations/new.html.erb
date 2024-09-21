@@ -4,6 +4,8 @@
       <div class="login-title">
         <h1>Sign up</h1>
       </div>
+      <%= render 'devise/shared/error_messages', model: @user %>
+
 
       <div class="form-group">
         <%= f.label :name %>

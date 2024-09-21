@@ -2,8 +2,8 @@
 
 
 <div class="chat-main">
-  <div class="containe44r">
-<h1>運動記録投稿</h1>
+  <div class="container">
+      <h1> Do it！</h1>
   <%= form_with model: @log, url:logs_path, id: 'new_user', class: 'new_user', local: true, data: { turbo: false } do |form| %>
 
   <% if @log.errors.any? %>

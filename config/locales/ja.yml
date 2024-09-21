@@ -53,3 +53,7 @@ ja:
       precision: 3
       significant: false
       strip_insignificant_zeros: false
+  simple_calendar:
+    previous: "<<"  # 前の月
+    today: "Today"      # 今日に戻る
+    next: ">>"      # 次の月
