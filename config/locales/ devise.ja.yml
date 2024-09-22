@@ -1,0 +1,38 @@
+ja:
+  devise:
+    sessions:
+      user:
+        signed_in: 'ログインしました。'
+        signed_out: 'ログアウトしました。'
+        already_signed_out: 'すでにログアウトしています。'
+    passwords:
+      user:
+        send_instructions: 'パスワードの再設定方法を送りました。'
+        updated: 'パスワードが正しく変更されました。'
+        updated_not_active: 'パスワードが正しく設定されましたが、有効化されていません。'
+    registrations:
+      user:
+        signed_up: 'アカウント登録が完了しました。'
+        signed_up_but_unconfirmed: 'アカウント登録が完了しましたが、確認が必要です。'
+        signed_up_but_inactive: 'アカウント登録が完了しましたが、有効化されていません。'
+        updated: 'アカウント情報を更新しました。'
+        update_needs_confirmation: 'メールアドレスの変更には確認が必要です。新しい確認メールを送りました。'
+
+  errors:
+    messages:
+      not_saved:
+        one: "1つのエラーが発生しました: %{errors}"
+        other: "%{count}つのエラーが発生しました: %{errors}"
+      blank: "を入力してください"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "メールアドレスを入力してください"
+            password:
+              blank: "パスワードを入力してください"
+            name:
+              blank: "名前を入力してください"
