@@ -850,13 +850,7 @@ h3 {
 
 }
 
-.weit_warppoer {
-  /* 既存のスタイル */
-  background-image: url('<%= image_path "istockphoto-682336824-1024x1024.jpg" %>');
-  /* 画像のパスを調整 */
-  background-size: cover;
-  background-position: center;
-}
+
 
 @media (max-width: 768px) {
   .chat-main {
@@ -1014,6 +1008,14 @@ h3 {
 
 .weight-table tr:nth-child(even) {
   background-color: #e8ffe1;
+}
+
+.weights_delete-btn {
+  background-color: #007bff;
+  font-size: 5px;
+  padding: 5px;
+  border-radius: 8%;
+
 
 }
 
