@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  # before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :move_to_index, only: [:index, :show]
 
   def index
@@ -26,7 +26,6 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-
   end
 
   private

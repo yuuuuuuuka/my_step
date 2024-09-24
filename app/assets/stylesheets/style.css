@@ -517,6 +517,39 @@ logs/new
   background-color: #FFCC00;
 }
 
+
+/***アニメーション****/
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+}
+
+#animation-area {
+  display: block;
+  /* 初期状態で表示 */
+  text-align: center;
+  /* 画像を中央に配置 */
+  /* その他のスタイル */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#animation-area img {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
 /********************************************************
  show
 ********************************************************/

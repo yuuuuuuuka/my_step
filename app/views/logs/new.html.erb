@@ -14,8 +14,12 @@
             <li><%= message %></li>
           <% end %>
         </ul>
+
+        <% if flash[:alert] %>
+           <div class="alert alert-danger"><%= flash[:alert] %></div>
+          <% end %>
       </div>
-    <% end %>
+  <% end %>
 
 
 
@@ -45,8 +49,13 @@
       <%= form.submit "記録する", class: "btn btn-primary" %>
     </div>
   </div>
+  <div id="animation-area" style="display: none;">
+      <img src="s0099_4_0.png" alt="お疲れさまでした！" class="animation-image">
+    </div>
 
   <% end %>
+  </div>
 
-</div>
+
+
 </div>

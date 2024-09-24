@@ -22,7 +22,7 @@ ja:
     messages:
       not_saved:
         #one: "1つのエラーが発生しました: %{errors}"
-        other: "%{count}つのエラーが発生しました: %{errors}"
+        other: "%{count}つのエラーが発生しました:"
      # blank: "を入力してください"
 
   #activerecord:

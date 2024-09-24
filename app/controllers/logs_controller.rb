@@ -1,10 +1,10 @@
 class LogsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  # before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, :destroy]
   before_action :move_to_index, except: [:index, :show, :destroy]
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @logs = current_user.logs
+    @logs = current_user&.logs || []
   end
 
   def new
@@ -14,10 +14,18 @@ class LogsController < ApplicationController
   def create
     @log = Log.new(log_params)
     @log.calculate_calories
-    if @log.save
-      redirect_to root_path
-    else
+    if @log.errors.any?
       render :new, status: :unprocessable_entity
+      # if @log.save
+      # redirect_to root_path
+    elsif current_user&.profile&.weight.blank?
+      flash[:alert] = '体重を登録してください。'
+      redirect_to new_user_profile_path(current_user)
+
+    else
+      @log.save
+      redirect_to root_path
+      # render :new, status: :unprocessable_entity
     end
   end
 
@@ -33,7 +41,7 @@ class LogsController < ApplicationController
   def update
     @log = Log.find(params[:id])
     if @log.update(log_params)
-      redirect_to root_path, notice: '運動記録が更新されました。'
+      redirect_to log_path(@log)
     else
       render :edit
     end
@@ -50,11 +58,11 @@ class LogsController < ApplicationController
   private
 
   def log_params
-    params.require(:log).permit(:date, :name, :duration, :reps, :memo).merge(user_id: current_user.id)
+    params.require(:log).permit(:date, :name, :duration, :reps, :memo).merge(user_id: current_user&.id)
   end
 
   def move_to_index
-    return if user_signed_in?
+    return if user_signed_in? || action_name == 'new'
 
     redirect_to action: :index
   end

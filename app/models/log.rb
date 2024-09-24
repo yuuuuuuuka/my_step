@@ -1,5 +1,6 @@
 class Log < ApplicationRecord
   belongs_to :user
+  before_save :calculate_calories
 
   validates :date, presence: { message: '運動を行った日付を入力してください。' }
   validates :duration, numericality: { only_integer: true, greater_than_or_equal_to: 0, message: '運動時間は0分以上の整数値を入力してください。' }
@@ -9,8 +10,8 @@ class Log < ApplicationRecord
   def calculate_calories
     user_weight = user.profile&.weight
     if user_weight.nil?
-      errors.add(:user, 'ユーザーの体重が設定されていません')
-      return
+      errors.add(:base, '体重が設定されていません')
+      return false
     end
 
     calories_per_minute = case name

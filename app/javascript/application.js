@@ -10,3 +10,4 @@ import "controllers"
 import "./custom_form" // カカスタムフォーム用のJavaScriptを読み込む
 import "./edit_weights"
 import "./delete_weights"
+import "./animation_trigger.js"
