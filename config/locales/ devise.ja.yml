@@ -21,18 +21,18 @@ ja:
   errors:
     messages:
       not_saved:
-        one: "1つのエラーが発生しました: %{errors}"
-        other: "%{count}つのエラーが発生しました: %{errors}"
-      blank: "を入力してください"
+        #one: "1つのエラーが発生しました: %{errors}"
+        other: "%{count}つのエラーが発生しました:"
+     # blank: "を入力してください"
 
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            email:
-              blank: "メールアドレスを入力してください"
-            password:
-              blank: "パスワードを入力してください"
-            name:
-              blank: "名前を入力してください"
+  #activerecord:
+    #errors:
+     # models:
+       # user:
+         # attributes:
+          #  email:
+            #  blank: "メールアドレスを入力してください"
+            #password:
+           #   blank: "パスワードを入力してください"
+           # name:
+           #   blank: "名前を入力してください"

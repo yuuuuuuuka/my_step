@@ -30,6 +30,34 @@ class WeightsController < ApplicationController
     end
   end
 
+  def update
+    @weight = Weight.find(params[:id])
+
+    # params[:field] でどのフィールドを更新するかを確認
+    if params[:field] == 'date'
+      @weight.update(date: Date.parse(params[:value]))
+    elsif params[:field] == 'weight'
+      @weight.update(weight: params[:value])
+    end
+
+    # 成功時にはJSONでレスポンスを返す
+    render json: { success: true }
+  end
+
+  def destroy
+    @weight = current_user.weights.find(params[:id])
+
+    respond_to do |format|
+      if @weight.destroy
+        format.html { redirect_to weights_path, notice: 'Weight was successfully deleted.' }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to weights_path, alert: 'Failed to delete weight.' }
+        format.json { render json: { success: false, errors: @weight.errors.full_messages }, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
 
   def weight_params

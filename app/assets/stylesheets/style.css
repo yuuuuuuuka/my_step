@@ -517,6 +517,39 @@ logs/new
   background-color: #FFCC00;
 }
 
+
+/***アニメーション****/
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+}
+
+#animation-area {
+  display: block;
+  /* 初期状態で表示 */
+  text-align: center;
+  /* 画像を中央に配置 */
+  /* その他のスタイル */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#animation-area img {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
 /********************************************************
  show
 ********************************************************/
@@ -850,13 +883,7 @@ h3 {
 
 }
 
-.weit_warppoer {
-  /* 既存のスタイル */
-  background-image: url('<%= image_path "istockphoto-682336824-1024x1024.jpg" %>');
-  /* 画像のパスを調整 */
-  background-size: cover;
-  background-position: center;
-}
+
 
 @media (max-width: 768px) {
   .chat-main {
@@ -1014,6 +1041,14 @@ h3 {
 
 .weight-table tr:nth-child(even) {
   background-color: #e8ffe1;
+}
+
+.weights_delete-btn {
+  background-color: #007bff;
+  font-size: 5px;
+  padding: 5px;
+  border-radius: 8%;
+
 
 }
 
