@@ -14,7 +14,6 @@ Rails.application.routes.draw do
     resources :profiles, only: [:new, :create, :show,:index,:edit]
 
     end
-
-
+    get '/assets/edit_weights', to: redirect('/assets/edit_weights.js')
 
 end
