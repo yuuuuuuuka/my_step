@@ -25,23 +25,40 @@
 
 ## データベース設計
 
+PostgreSQL
+
+
 [![Image from Gyazo](https://i.gyazo.com/d84bb89fd1cdcd944d2d3db4cc8d5e28.png)](https://gyazo.com/d84bb89fd1cdcd944d2d3db4cc8d5e28)
-## 機能一覧
+##　アプリ機能一覧
 * ユーザログイン機能(device)
 * 投稿機能
 * カレンダー機能
 * 消費カロリー計算機能
 * グラフ表示機能
 
+## アプリ技術機能機能
+#### バックエンド
+* ruby 3.2.0
+* rails 7.0.0
+* puma 5.0.0
+
+####  フロントエンド
+* HTML
+* CSS
+* JavaScript （jQuery）
+
+#### データベース
+* My SQL
+
 
 ## 利用方法
 
 #### 1.ログインページで新規登録を行う
-[![Image from Gyazo](https://i.gyazo.com/1b561d81034b483ddc880d4f3a7bfb35.gif)](https://gyazo.com/1b561d81034b483ddc880d4f3a7bfb35)
 
+[![Image from Gyazo](https://i.gyazo.com/2401cd7e6f3c1107cd17036fcf0a083f.gif)](https://gyazo.com/2401cd7e6f3c1107cd17036fcf0a083f)
 #### 2.投稿するボタンを押すと運動した「日付、運動名を選択、時間、回数、メモ」を入力すると投稿するを押すとカレンダーに表示される
 
-[![Image from Gyazo](https://i.gyazo.com/637a0b1e9588d8eb3be7a331271c0f71.gif)](https://gyazo.com/637a0b1e9588d8eb3be7a331271c0f71)
+[![Image from Gyazo](https://i.gyazo.com/69fb0da7e141ff435d13a7b82fef3171.gif)](https://gyazo.com/69fb0da7e141ff435d13a7b82fef3171)
 
 #### 3.カレンダーを押すと運動した内容の詳細ページへ遷移する。詳細画面で内容の変更・削除。戻るすることができる[![Image from Gyazo](https://i.gyazo.com/3e002fbd85f4ebc7cf54c4514d36c5a5.gif)](https://gyazo.com/3e002fbd85f4ebc7cf54c4514d36c5a5)
 #### 4.記録するボタンで体重を記録し記録を見るを押すと過去のデータがグラフとして表示される
@@ -53,9 +70,8 @@
 
 #### 5.身長と体重を入力するとBMI計算がされる
 
-[![Image from Gyazo](https://i.gyazo.com/6c5b4bd6b0298318f119d7aecf5fbe91.gif)](https://gyazo.com/6c5b4bd6b0298318f119d7aecf5fbe91)
 
-
+[![Image from Gyazo](https://i.gyazo.com/337b7dfc9c5493b0a03b481890512489.gif)](https://gyazo.com/337b7dfc9c5493b0a03b481890512489)
 
 
 
@@ -67,7 +83,7 @@
 ## 実装予定の機能
 * セットメニュー機能
 (部位によって用意されているメニューを作ることで、ユーザーがなんの運動をするかを考えることなく始められる)
-
+* 労いの言葉を添える機能
 
 ## 改善点
 * デザインがシンプルすぎるので、イラストにすることでよりユーザーが瞬時に理解できるようにする
