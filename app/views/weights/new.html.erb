@@ -28,7 +28,7 @@
           <td class="editable" data-type="date" data-id="<%= weight.id %>"><%= weight.date.strftime("%m/%d") %></td>
     <td class="editable" data-type="weight" data-id="<%= weight.id %>"><%= weight.weight %></td>
     <td>
-      <button class="weights_delete-btn" data-id="<%= weight.id %>">削除</button>
+      <button type="button" class="weights_delete-btn" data-id="<%= weight.id %>">削除</button>
     </td>
         </tr>
       <% end %>
