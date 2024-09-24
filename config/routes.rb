@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :profiles, only: [:new, :create, :show,:index,:edit]
 
     end
-    get '/assets/edit_weights', to: 'assets#edit_weights'
+
 
 
 end
