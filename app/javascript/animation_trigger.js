@@ -11,10 +11,17 @@ $(document).on('turbolinks:load', function () {
     })
       .done(function (data) {
         // サーバーから成功レスポンスを受け取った場合
+
+        // 画像を表示
         $('#animation-area').fadeIn(500);
+
+        // 画像を数秒間表示してからページ遷移
         setTimeout(function () {
-          $('#animation-area').fadeOut(500);
-        }, 2000);
+          $('#animation-area').fadeOut(500, function () {
+            // ページ遷移 (例: indexページにリダイレクト)
+            window.location.href = '/index';
+          });
+        }, 2000); // 2秒後に遷移
       })
       .fail(function (jqXHR, textStatus, errorThrown) {
         // サーバーからエラーレスポンスを受け取った場合
