@@ -1,0 +1,11 @@
+<%= turbo_stream.update 'animation-area' do %>
+  <div id="animation-area" class="visible">
+    <%= image_tag('s0099_4_0.png', alt: 'お疲れ様でした！', class: 'animation-image') %>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "<%= root_path %>";
+    }, 3000);
+  </script>
+<% end %>

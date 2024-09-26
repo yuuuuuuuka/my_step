@@ -528,13 +528,12 @@ logs/new
   font-size: 0.8rem;
 }
 
-#animation-area {
+/*#animation-area {
   display: block;
-  /* 初期状態で表示 */
-  text-align: center;
-  /* 画像を中央に配置 */
-  /* その他のスタイル */
-}
+  /* 初期状態で表示
+  text-align: center;}*/
+
+
 
 @keyframes fadeIn {
   from {
@@ -546,8 +545,22 @@ logs/new
   }
 }
 
+
+
+#animation-area.visible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 #animation-area img {
+  position: fixed;
   animation: fadeIn 0.5s ease-in-out;
+  top: 50%;
+  left: 40%;
 }
 
 /********************************************************
