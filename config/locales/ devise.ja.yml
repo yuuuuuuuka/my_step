@@ -23,16 +23,14 @@ ja:
       not_saved:
         #one: "1つのエラーが発生しました: %{errors}"
         other: "%{count}つのエラーが発生しました:"
-     # blank: "を入力してください"
 
-  #activerecord:
-    #errors:
-     # models:
-       # user:
-         # attributes:
-          #  email:
-            #  blank: "メールアドレスを入力してください"
-            #password:
-           #   blank: "パスワードを入力してください"
-           # name:
-           #   blank: "名前を入力してください"
+activerecord:
+    errors:
+      models:
+        weight:
+          attributes:
+            weight:
+              blank: "体重を入力してください"
+              not_a_number: "数値で入力してください"
+            user:
+              required: "ユーザーが必要です"

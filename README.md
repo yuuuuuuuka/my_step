@@ -25,7 +25,7 @@
 
 ## データベース設計
 
-PostgreSQL
+
 
 
 [![Image from Gyazo](https://i.gyazo.com/d84bb89fd1cdcd944d2d3db4cc8d5e28.png)](https://gyazo.com/d84bb89fd1cdcd944d2d3db4cc8d5e28)

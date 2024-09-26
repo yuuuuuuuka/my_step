@@ -8,7 +8,6 @@
        <%= link_to "記録を見る",weights_path(current_user), class: "post" %>
       <%= link_to "BMI計算", new_user_profile_path(current_user), class: "post"if current_user.present?  %>
 
-      <%#>= render partial: 'simple_calendar/month_calendar', locals: { month: @month, year: @year, start_date: @start_date } %>
  <%= month_calendar(class: "custom-calendar") do |date| %>
        <div class="date">
         <%= date.day %>

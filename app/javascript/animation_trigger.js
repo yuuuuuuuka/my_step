@@ -21,6 +21,7 @@ $(document).on('turbolinks:load', function () {
         // エラーメッセージを表示する処理
         console.error(errorThrown);
         // 例: $('#error-message').text(jqXHR.responseJSON.error);
+
       });
   });
 });
