@@ -528,11 +528,6 @@ logs/new
   font-size: 0.8rem;
 }
 
-/*#animation-area {
-  display: block;
-  /* 初期状態で表示
-  text-align: center;}*/
-
 
 
 @keyframes fadeIn {
@@ -559,8 +554,10 @@ logs/new
 #animation-area img {
   position: fixed;
   animation: fadeIn 0.5s ease-in-out;
-  top: 50%;
-  left: 40%;
+  top: 45%;
+  left: 45%;
+  transform: scale(2);
+
 }
 
 /********************************************************
