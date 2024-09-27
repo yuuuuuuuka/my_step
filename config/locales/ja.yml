@@ -57,3 +57,14 @@ ja:
     previous: "<<"  # 前の月
     today: "Today"      # 今日に戻る
     next: ">>"      # 次の月
+
+  activerecord:
+    errors:
+      models:
+        weight:
+          attributes:
+            weight:
+              blank: "体重を入力してください"
+              not_a_number: "数値で入力してください"
+            user:
+              required: "ユーザーが必要です"
