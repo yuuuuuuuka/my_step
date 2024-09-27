@@ -4,7 +4,7 @@
 <div class="chat-main">
   <div class="container">
       <h1> Do it！</h1>
-  <%= form_with model: @log, url:logs_path, id: 'new_user', class: 'new_user', local: true, data: { turbo: false } do |form| %>
+  <%= form_with model: @log, url:logs_path, id: 'new_user', class: 'new_user' do |form| %>
 
   <% if @log.errors.any? %>
       <div class="error-messages">
@@ -20,7 +20,6 @@
           <% end %>
       </div>
   <% end %>
-
 
 
   <div class="form-box">
@@ -49,13 +48,9 @@
       <%= form.submit "記録する", class: "btn btn-primary" %>
     </div>
   </div>
-  <div id="animation-area" style="display: none;">
-      <img src="s0099_4_0.png" alt="お疲れさまでした！" class="animation-image">
-    </div>
+  <turbo-frame id="animation-area">
+</turbo-frame>
 
   <% end %>
   </div>
-
-
-
 </div>
