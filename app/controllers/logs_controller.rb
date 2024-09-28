@@ -15,22 +15,18 @@ class LogsController < ApplicationController
     @log = Log.new(log_params)
     @log.calculate_calories
     respond_to do |format|
-      if @log.errors.any?
+      if @log.errors.any? || current_user&.profile&.weight.blank?
+        flash[:alert] = '体重を登録してください。' if current_user&.profile&.weight.blank?
         format.json { render json: @log.errors, status: :unprocessable_entity }
         format.html { render :new, status: :unprocessable_entity }
-        # render :new, status: :unprocessable_entity
 
-      elsif current_user&.profile&.weight.blank?
-        flash[:alert] = '体重を登録してください。'
         format.json { render json: { error: '体重を登録してください。' }, status: :unprocessable_entity }
         format.html { redirect_to new_user_profile_path(current_user) }
-      # redirect_to new_user_profile_path(current_user)
       else
         @log.save
         format.json { render json: { message: '記録が成功しました！' }, status: :created }
         format.html { redirect_to root_path, notice: '記録が成功しました！' }
         format.turbo_stream
-        # redirect_to root_path
       end
     end
   end
