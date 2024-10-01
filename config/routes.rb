@@ -12,8 +12,8 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :profiles, only: [:new, :create, :show,:index,:edit]
-    end
+   end
 
 
-
+   match '/users', to: redirect('/'), via: :get
 end

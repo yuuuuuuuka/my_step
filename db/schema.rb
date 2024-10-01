@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_16_025630) do
+ActiveRecord::Schema[7.0].define(version: 2024_10_01_072247) do
   create_table "logs", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.date "date", null: false
@@ -28,7 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_16_025630) do
     t.bigint "user_id", null: false
     t.float "height"
     t.float "weight"
-    t.float "goal_weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
@@ -53,6 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_16_025630) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
+    t.float "goal_weight"
     t.index ["user_id"], name: "index_weights_on_user_id"
   end
 

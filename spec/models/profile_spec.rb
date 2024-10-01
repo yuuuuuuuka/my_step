@@ -29,11 +29,6 @@ RSpec.describe Profile, type: :model do
         @profile.height = nil
         expect(@profile).to be_valid
       end
-
-      it '目標体重が空でも作成できる' do
-        @profile.goal_weight = nil
-        expect(@profile).to be_valid
-      end
     end
   end
 end
