@@ -15,7 +15,7 @@ class LogsController < ApplicationController
     @log = Log.new(log_params)
     @log.calculate_calories
     respond_to do |format|
-      if @log.errors.any? || current_user&.profile&.weight.blank?
+      if @log.invalid? || current_user&.profile&.weight.blank?
         flash[:alert] = '体重を登録してください。' if current_user&.profile&.weight.blank?
         format.json { render json: @log.errors, status: :unprocessable_entity }
         format.html { render :new, status: :unprocessable_entity }
