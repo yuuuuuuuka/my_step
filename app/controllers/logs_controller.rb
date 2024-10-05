@@ -18,10 +18,10 @@ class LogsController < ApplicationController
       if @log.invalid? || current_user&.profile&.weight.blank?
         flash[:alert] = '体重を登録してください。' if current_user&.profile&.weight.blank?
         format.json { render json: @log.errors, status: :unprocessable_entity }
-        format.html { render :new, status: :unprocessable_entity }
-
-        format.json { render json: { error: '体重を登録してください。' }, status: :unprocessable_entity }
         format.html { redirect_to new_user_profile_path(current_user) }
+
+        # format.json { render json: { error: '体重を登録してください。' }, status: :unprocessable_entity }
+        # format.html { redirect_to new_user_profile_path(current_user) }
       else
         @log.save
         format.json { render json: { message: '記録が成功しました！' }, status: :created }
