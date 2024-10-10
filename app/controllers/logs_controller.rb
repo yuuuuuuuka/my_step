@@ -20,8 +20,6 @@ class LogsController < ApplicationController
         format.json { render json: @log.errors, status: :unprocessable_entity }
         format.html { redirect_to new_user_profile_path(current_user) }
 
-        # format.json { render json: { error: '体重を登録してください。' }, status: :unprocessable_entity }
-        # format.html { redirect_to new_user_profile_path(current_user) }
       else
         @log.save
         format.json { render json: { message: '記録が成功しました！' }, status: :created }
