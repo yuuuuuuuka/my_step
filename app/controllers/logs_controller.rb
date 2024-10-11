@@ -2,6 +2,7 @@ class LogsController < ApplicationController
   # before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, :destroy]
   before_action :move_to_index, except: [:index, :show, :destroy]
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_log, only: [:show, :edit, :update]
 
   def index
     @logs = current_user&.logs || []
@@ -30,12 +31,12 @@ class LogsController < ApplicationController
   end
 
   def show
-    @log = Log.find(params[:id])
+    # @log = Log.find(params[:id])
     @logs = current_user.logs
   end
 
   def edit
-    @log = Log.find(params[:id])
+    # @log = Log.find(params[:id])
   end
 
   def update
@@ -72,5 +73,9 @@ class LogsController < ApplicationController
     return unless @log.nil?
 
     redirect_to logs_path
+  end
+
+  def set_log
+    @log = Log.find(params[:id])
   end
 end
