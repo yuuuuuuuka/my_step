@@ -1094,3 +1094,36 @@ select {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
 }
+
+.weight-info {
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin: auto;
+  display: block;
+  text-align: center;
+
+}
+
+.weight {
+  color: rgb(80, 78, 78);
+  font-size: larger;
+}
+
+.goal-weight {
+  font-size: larger;
+
+}
+
+.difference {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #007bff;
+  font-size: x-large;
+}
+
+.no-record {
+  margin-top: 30px;
+  color: gray;
+  font-size: x-large;
+}

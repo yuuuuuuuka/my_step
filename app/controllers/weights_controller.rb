@@ -13,6 +13,7 @@ class WeightsController < ApplicationController
                else
                  current_user.weights.select(:date, :weight).order(:date)
                end
+    @latest_weight = current_user.weights.order(date: :desc).first
   end
 
   def new
