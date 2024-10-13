@@ -5,7 +5,7 @@
 <h1 class="weight-records-title">Weight Records！！</h1>
   <div class="form-group">
 
-    <%= form.select :period, options_for_select([['1 Week', '1_week'], ['1 Month', '1_month'], ['3 Months', '3_months']]), prompt: 'Select Period' %>
+    <%= form.select :period, options_for_select([['1 Week', '1_week'], ['1 Month', '1_month'], ['3 Months', '3_months']]), prompt: 'All Data' %>
 
   </div>
   <%= form.submit '選択', class: "filter-button" %>
@@ -14,3 +14,14 @@
 <div class="weight-chart-container">
   <%= render 'chart', weights: @weights %>
 </div>
+
+
+<% if @latest_weight %>
+  <div class="weight-info">
+    <p class="weight">最新の体重記録: <%= @latest_weight.weight %>kg</p>
+    <p class="goal-weight">目標体重: <%= @latest_weight.goal_weight %>kg</p>
+    <p class="difference">目標との差: <%= @latest_weight.difference_from_goal %>kg</p>
+  </div>
+<% else %>
+  <p class="no-record">体重記録がありません。</p>
+<% end %>

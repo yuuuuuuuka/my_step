@@ -11,9 +11,18 @@
           <%= form.label :weight, "体重 (kg)", class: "weight-form-label" %>
           <%= form.number_field :weight, step: 0.1, class: "weight-form-control" %>
          </div>
-        <div class="form-group">
+
+          <h1 class="form-title">目標体重</h1>
+          <div class="form-group">
+          <%= form.label :goal_weight, "目標の体重 (kg)", class: "weight-form-label" %>
+          <%= form.number_field :goal_weight, step: 0.1, class: "weight-form-control" %>
+         </div>
+            <div class="form-group">
         <%= form.submit "記録する", class: "btn btn-primary" %>
           </div>
+
+
+
          <table class="weight-table">
     <thead>
       <tr>

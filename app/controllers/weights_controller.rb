@@ -13,6 +13,7 @@ class WeightsController < ApplicationController
                else
                  current_user.weights.select(:date, :weight).order(:date)
                end
+    @latest_weight = current_user.weights.order(date: :desc).first
   end
 
   def new
@@ -61,6 +62,6 @@ class WeightsController < ApplicationController
   private
 
   def weight_params
-    params.require(:weight).permit(:date, :weight).merge(user_id: current_user.id)
+    params.require(:weight).permit(:date, :weight, :goal_weight).merge(user_id: current_user.id)
   end
 end
