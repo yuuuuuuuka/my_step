@@ -31,12 +31,10 @@ class LogsController < ApplicationController
   end
 
   def show
-    # @log = Log.find(params[:id])
     @logs = current_user.logs
   end
 
   def edit
-    # @log = Log.find(params[:id])
   end
 
   def update

@@ -8,6 +8,6 @@ class Weight < ApplicationRecord
   def difference_from_goal
     return nil unless goal_weight
 
-    goal_weight - weight
+    (goal_weight - weight).round(1)
   end
 end
