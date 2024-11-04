@@ -20,7 +20,7 @@
   <div class="weight-info">
     <p class="weight">最新の体重記録: <%= @latest_weight.weight %>kg</p>
     <p class="goal-weight">目標体重: <%= @latest_weight.goal_weight %>kg</p>
-    <p class="difference">目標との差: <%= @latest_weight.difference_from_goal.inspect %>kg</p>
+    <p class="difference">目標との差:  <%= number_with_precision(@latest_weight.difference_from_goal, precision: 1) %>kg</p>
   </div>
 <% else %>
   <p class="no-record">体重記録がありません。</p>
