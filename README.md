@@ -27,8 +27,7 @@
 
 
 
-
-[![Image from Gyazo](https://i.gyazo.com/d84bb89fd1cdcd944d2d3db4cc8d5e28.png)](https://gyazo.com/d84bb89fd1cdcd944d2d3db4cc8d5e28)
+[![Image from Gyazo](https://i.gyazo.com/bc5e3542ab4bf35dc1df5a8026be02db.png)](https://gyazo.com/bc5e3542ab4bf35dc1df5a8026be02db)
 ## アプリ機能一覧
 * ユーザログイン機能(device)
 * 投稿機能
@@ -54,24 +53,18 @@
 ## 利用方法
 
 #### 1.ログインページで新規登録を行う
+[![Image from Gyazo](https://i.gyazo.com/e21b25f3585e09a52b7b6fbd68243283.gif)](https://gyazo.com/e21b25f3585e09a52b7b6fbd68243283)
 
-[![Image from Gyazo](https://i.gyazo.com/2401cd7e6f3c1107cd17036fcf0a083f.gif)](https://gyazo.com/2401cd7e6f3c1107cd17036fcf0a083f)
-#### 2.投稿するボタンを押すと運動した「日付、運動名を選択、時間、回数、メモ」を入力すると投稿するを押すとカレンダーに表示される
+#### 2.運動するボタンを押し、運動した「日付、運動名を選択、時間、回数、メモ」を入力すると投稿するを押すとカレンダーに表示される
+[![Image from Gyazo](https://i.gyazo.com/2396d872b8c280be3ea17c5203a405e3.gif)](https://gyazo.com/2396d872b8c280be3ea17c5203a405e3)
 
-[![Image from Gyazo](https://i.gyazo.com/69fb0da7e141ff435d13a7b82fef3171.gif)](https://gyazo.com/69fb0da7e141ff435d13a7b82fef3171)
-
-#### 3.カレンダーを押すと運動した内容の詳細ページへ遷移する。詳細画面で内容の変更・削除。戻るすることができる[![Image from Gyazo](https://i.gyazo.com/3e002fbd85f4ebc7cf54c4514d36c5a5.gif)](https://gyazo.com/3e002fbd85f4ebc7cf54c4514d36c5a5)
+#### 3.カレンダーを押すと運動した内容の詳細ページへ遷移する。詳細画面で内容の変更・削除。戻るすることができる
+[![Image from Gyazo](https://i.gyazo.com/88555bed6f3ee459b3b3cd57bc61c2bd.gif)](https://gyazo.com/88555bed6f3ee459b3b3cd57bc61c2bd)
 #### 4.記録するボタンで体重を記録し記録を見るを押すと過去のデータがグラフとして表示される
-
-[![Image from Gyazo](https://i.gyazo.com/6ee2bf364ba8761cd1f47383184bf9d0.gif)](https://gyazo.com/6ee2bf364ba8761cd1f47383184bf9d0)
-[![Image from Gyazo](https://i.gyazo.com/94799cea690c4b5d7b33b2d61df0226c.png)](https://gyazo.com/94799cea690c4b5d7b33b2d61df0226c)
-
-
+[![Image from Gyazo](https://i.gyazo.com/8d6a8732d38b191c558952b762f553c2.gif)](https://gyazo.com/8d6a8732d38b191c558952b762f553c2)
 
 #### 5.身長と体重を入力するとBMI計算がされる
-
-
-[![Image from Gyazo](https://i.gyazo.com/337b7dfc9c5493b0a03b481890512489.gif)](https://gyazo.com/337b7dfc9c5493b0a03b481890512489)
+[![Image from Gyazo](https://i.gyazo.com/a7d3bc97f28ae0d9b4ba81d5f012a9a7.gif)](https://gyazo.com/a7d3bc97f28ae0d9b4ba81d5f012a9a7)
 
 
 
@@ -90,3 +83,4 @@
 
 * 入力欄が多いことで、ユーザーが打つのが面倒になる。
 マイページなどに普段行う運動内容を保存しておく機能があると良いと思いました
+[![Image from Gyazo](https://i.gyazo.com/e21b25f3585e09a52b7b6fbd68243283.gif)](https://gyazo.com/e21b25f3585e09a52b7b6fbd68243283)
