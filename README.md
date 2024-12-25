@@ -25,9 +25,7 @@
 
 ## データベース設計
 
-
-
-[![Image from Gyazo](https://i.gyazo.com/bc5e3542ab4bf35dc1df5a8026be02db.png)](https://gyazo.com/bc5e3542ab4bf35dc1df5a8026be02db)
+[![Image from Gyazo](https://i.gyazo.com/c51bf56453e2ec658fea203608bc0a0f.png)](https://gyazo.com/c51bf56453e2ec658fea203608bc0a0f)
 ## アプリ機能一覧
 * ユーザログイン機能(device)
 * 投稿機能
